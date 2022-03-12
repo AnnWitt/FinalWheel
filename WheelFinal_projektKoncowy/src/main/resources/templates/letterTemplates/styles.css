@@ -1,0 +1,68 @@
+body {
+    background-color: #30a930;
+}
+
+.buttonEmpty {
+    image-orientation: 0;
+    background-color: #f7fcf7;
+    border-color: #ffffff;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+}
+.buttonInactive{
+    font-size: +20px;
+    image-orientation: 0;
+    color: #423e3e;
+    background-color: #6c766f;
+    border-color: #ffffff;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonActive{
+    font-size: +20px;
+    image-orientation: 0;
+    color: #ffffff;
+    background-color: #a4060d;
+    border-color: #ffffff;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letterKnown {
+    font-size: +20px;
+    image-orientation: 0;
+    color: #070907;
+    background-color: #54bb98;
+    border-color: #dae5da;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letterUnknown {
+    font-size: +20px;
+    image-orientation: 0;
+    color: #ffffff;
+    background-color: #103f10;
+    border-color: #ffffff;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
