@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.wheeloffortune.core.module.game.entity;
 
 public enum Turn {
     PLAYER1(1),

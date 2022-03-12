@@ -1,4 +1,6 @@
-package com.example.demo.entity;
+package com.wheeloffortune.core.module.game.user.entity;
+
+import com.wheeloffortune.core.module.game.entity.WheelOfFortune;
 
 import javax.persistence.*;
 

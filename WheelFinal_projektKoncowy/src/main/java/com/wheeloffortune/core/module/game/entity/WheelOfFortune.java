@@ -1,8 +1,10 @@
-package com.example.demo.entity;
+package com.wheeloffortune.core.module.game.entity;
+
+import com.wheeloffortune.core.module.game.user.entity.User;
+import com.wheeloffortune.core.module.game.word.entity.Word;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "game")
@@ -17,6 +19,6 @@ public class WheelOfFortune {
     private Turn turn;
     @OneToMany(mappedBy = "wheelOfFortune")
     private List<User> players;
-    @OneToMany(mappedBy = "wheelOfFortune")
-    private List<Word> wordsList;
+    @OneToOne(mappedBy = "wheelOfFortune")
+    private Word word;
 }

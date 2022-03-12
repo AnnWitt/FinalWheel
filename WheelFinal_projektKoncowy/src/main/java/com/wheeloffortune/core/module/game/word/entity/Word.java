@@ -1,4 +1,6 @@
-package com.example.demo.entity;
+package com.wheeloffortune.core.module.game.word.entity;
+
+import com.wheeloffortune.core.module.game.entity.WheelOfFortune;
 
 import javax.persistence.*;
 
@@ -12,6 +14,6 @@ public class Word {
     private String word;
     @ManyToOne
     private Category category;
-    @ManyToOne
+    @OneToOne
     private WheelOfFortune wheelOfFortune;
 }
