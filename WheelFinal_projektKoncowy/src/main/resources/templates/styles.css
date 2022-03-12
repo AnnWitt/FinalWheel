@@ -1,5 +1,6 @@
 body {
-    background-color: #000000;
+    //background-color: #000000;
+    background-color: #59692b;
 }
 
 .buttonEmpty {
@@ -74,11 +75,21 @@ body {
     border-style: ridge;
 }
 
-.headerFormat{
+header{
     display: flex;
     justify-content: left;
     align-items: center;
     border-style: ridge;
     border-color: #a4060d;
     offset-before: 30%;
+}
+
+nav{
+    color: #4b1a1e;
+   /* margin: 20px;*/
+    padding: 30px;
+}
+
+article{
+    color: crimson;
 }
