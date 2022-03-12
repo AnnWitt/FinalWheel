@@ -13,7 +13,7 @@ public class UserEntity {
     private Long id;
     private String username;
     @ManyToOne
-    private WheelOfFortuneEntity wheelOfFortuneEntity;
+    private WheelOfFortuneEntity wheelOfFortune;
 
     public Long getId() {
         return id;
@@ -34,11 +34,11 @@ public class UserEntity {
     }
 
     public WheelOfFortuneEntity getWheelOfFortuneEntity() {
-        return wheelOfFortuneEntity;
+        return wheelOfFortune;
     }
 
-    public UserEntity setWheelOfFortuneEntity(WheelOfFortuneEntity wheelOfFortuneEntity) {
-        this.wheelOfFortuneEntity = wheelOfFortuneEntity;
+    public UserEntity setWheelOfFortuneEntity(WheelOfFortuneEntity wheelOfFortune) {
+        this.wheelOfFortune = wheelOfFortune;
         return this;
     }
 }
