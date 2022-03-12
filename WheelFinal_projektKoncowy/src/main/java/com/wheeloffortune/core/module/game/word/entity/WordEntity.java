@@ -1,19 +1,19 @@
 package com.wheeloffortune.core.module.game.word.entity;
 
-import com.wheeloffortune.core.module.game.entity.WheelOfFortune;
+import com.wheeloffortune.core.module.game.entity.WheelOfFortuneEntity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "word")
-public class Word {
+public class WordEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String word;
     @ManyToOne
-    private Category category;
+    private CategoryEntity categoryEntity;
     @OneToOne
-    private WheelOfFortune wheelOfFortune;
+    private WheelOfFortuneEntity wheelOfFortuneEntity;
 }

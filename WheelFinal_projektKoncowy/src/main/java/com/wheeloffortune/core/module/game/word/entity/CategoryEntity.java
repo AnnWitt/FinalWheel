@@ -5,14 +5,14 @@ import java.util.List;
 
 @Entity
 @Table(name = "category")
-public class Category {
+public class CategoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     @OneToMany (mappedBy = "category")
-    private List<Word> wordlist;
+    private List<WordEntity> wordlist;
 
 
 }

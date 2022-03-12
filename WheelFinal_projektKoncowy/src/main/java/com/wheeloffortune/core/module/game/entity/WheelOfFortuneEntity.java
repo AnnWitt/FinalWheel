@@ -1,14 +1,14 @@
 package com.wheeloffortune.core.module.game.entity;
 
-import com.wheeloffortune.core.module.game.user.entity.User;
-import com.wheeloffortune.core.module.game.word.entity.Word;
+import com.wheeloffortune.core.module.game.user.entity.UserEntity;
+import com.wheeloffortune.core.module.game.word.entity.WordEntity;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "game")
-public class WheelOfFortune {
+public class WheelOfFortuneEntity {
 
     @Id
     @GeneratedValue
@@ -18,7 +18,7 @@ public class WheelOfFortune {
     private String currentWordState;
     private Turn turn;
     @OneToMany(mappedBy = "wheelOfFortune")
-    private List<User> players;
+    private List<UserEntity> players;
     @OneToOne(mappedBy = "wheelOfFortune")
-    private Word word;
+    private WordEntity wordEntity;
 }
