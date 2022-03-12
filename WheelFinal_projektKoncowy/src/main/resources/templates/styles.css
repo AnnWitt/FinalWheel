@@ -1,5 +1,5 @@
 body {
-    background-color: #30a930;
+    background-color: #000000;
 }
 
 .buttonEmpty {
@@ -65,4 +65,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pictureFormat{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-style: ridge;
+}
+
+.headerFormat{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-style: ridge;
+    border-color: #a4060d;
+    offset-before: 30%;
 }
