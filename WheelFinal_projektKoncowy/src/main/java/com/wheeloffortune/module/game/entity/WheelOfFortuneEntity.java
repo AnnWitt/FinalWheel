@@ -19,7 +19,7 @@ public class WheelOfFortuneEntity {
     private String currentWordState;
     private TurnEnum turn;
     @OneToMany(mappedBy = "wheelOfFortune")
-    private List<UserEntity> players;
+    private List<UserEntity> userEntity;
     @OneToOne(mappedBy = "wheelOfFortune")
     private WordEntity wordEntity;
 
@@ -68,12 +68,12 @@ public class WheelOfFortuneEntity {
         return this;
     }
 
-    public List<UserEntity> getPlayers() {
-        return players;
+    public List<UserEntity> getUserEntity() {
+        return userEntity;
     }
 
-    public WheelOfFortuneEntity setPlayers(List<UserEntity> players) {
-        this.players = players;
+    public WheelOfFortuneEntity setUserEntity(List<UserEntity> userEntity) {
+        this.userEntity = userEntity;
         return this;
     }
 

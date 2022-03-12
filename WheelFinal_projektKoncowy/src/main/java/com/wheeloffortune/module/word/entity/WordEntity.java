@@ -4,6 +4,7 @@ import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "word")
 public class WordEntity {
@@ -11,14 +12,20 @@ public class WordEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String uuid;
     private String word;
     @ManyToOne
-    private CategoryEntity categoryEntity;
+    @JoinColumn(name="wordlist")
+    private CategoryEntity category;
     @OneToOne
-    private WheelOfFortuneEntity wheelOfFortuneEntity;
+    private WheelOfFortuneEntity wheelOfFortune;
 
     public Long getId() {
         return id;
+    }
+
+    public String getUuid() {
+        return uuid;
     }
 
     public WordEntity setId(Long id) {
@@ -35,21 +42,21 @@ public class WordEntity {
         return this;
     }
 
-    public CategoryEntity getCategoryEntity() {
-        return categoryEntity;
+    public CategoryEntity getCategory() {
+        return category;
     }
 
-    public WordEntity setCategoryEntity(CategoryEntity categoryEntity) {
-        this.categoryEntity = categoryEntity;
+    public WordEntity setCategory(CategoryEntity category) {
+        this.category = category;
         return this;
     }
 
-    public WheelOfFortuneEntity getWheelOfFortuneEntity() {
-        return wheelOfFortuneEntity;
+    public WheelOfFortuneEntity getWheelOfFortune() {
+        return wheelOfFortune;
     }
 
-    public WordEntity setWheelOfFortuneEntity(WheelOfFortuneEntity wheelOfFortuneEntity) {
-        this.wheelOfFortuneEntity = wheelOfFortuneEntity;
+    public WordEntity setWheelOfFortune(WheelOfFortuneEntity wheelOfFortune) {
+        this.wheelOfFortune = wheelOfFortune;
         return this;
     }
 }
