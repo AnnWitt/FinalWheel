@@ -10,7 +10,6 @@ public class WheelOfFortune {
     @Id
     @GeneratedValue
     private Long id;
-    private String uuid;
     private Integer playerOneScore;
     private Integer playerTwoScore;
     private String currentWordState;

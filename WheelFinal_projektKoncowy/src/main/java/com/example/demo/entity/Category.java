@@ -9,9 +9,9 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @GeneratedValue()
-    private String uuid;
     private String name;
     @OneToMany (mappedBy = "category")
     private List<Word> wordlist;
+
+
 }
