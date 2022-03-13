@@ -1,0 +1,44 @@
+body {
+background-color: #dae5da;
+
+}
+/*
+
+
+.pictureFormat{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-style: ridge;
+    float: left;
+    width:20%
+}
+
+.panel{
+    justify-content: center;
+    float: right;
+    width:40%;
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-style: ridge;
+    border-color: #1234af
+}
+
+nav{
+    color: #4b1a1e;
+    !*   padding: 30px;*!
+    justify-content: right;
+    width:20%;
+    border-style: ridge;
+}
+
+article{
+    color: #0a3d0a;
+    border-style: ridge;
+    justify-content: right;
+    width:20%;
+}*/
