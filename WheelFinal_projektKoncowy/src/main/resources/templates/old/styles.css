@@ -1,5 +1,6 @@
 body {
-    background-color: #000000;
+    //background-color: #000000;
+    background-color: #59692b;
 }
 
 .buttonEmpty {
@@ -72,13 +73,35 @@ body {
     justify-content: left;
     align-items: center;
     border-style: ridge;
+    float: left;
+    width:20%
 }
 
-.headerFormat{
+.panel{
+    justify-content: center;
+    float: right;
+    width:40%;
+}
+
+header{
     display: flex;
     justify-content: left;
     align-items: center;
     border-style: ridge;
-    border-color: #a4060d;
-    offset-before: 30%;
+    border-color: #1234af
+}
+
+nav{
+    color: #4b1a1e;
+ /*   padding: 30px;*/
+    justify-content: right;
+    width:20%;
+    border-style: ridge;
+}
+
+article{
+    color: #0a3d0a;
+    border-style: ridge;
+    justify-content: right;
+    width:20%;
 }
