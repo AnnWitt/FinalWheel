@@ -10,7 +10,7 @@ VALUES (1,'Polityka'),
     (9,'Anatomia'),
     (10,'Sport');
 
-INSERT INTO word (id, category ,word)
+INSERT INTO word (id, category_id ,word)
 VALUES (1,1,'Sejm'),
        (2,1,'Senat'),
        (3,1,'Konstytucja'),

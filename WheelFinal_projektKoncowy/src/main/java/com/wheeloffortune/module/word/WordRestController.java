@@ -11,12 +11,5 @@ import java.util.List;
 @RestController
 public class WordRestController {
 
-    @Autowired
-    private WordService service;
-
-    @GetMapping("/api/admin/words")
-    public List<WordDto> getWords(){
-        return service.all();
-    }
 
 }
