@@ -44,7 +44,14 @@ public class WordService {
         );
     }
 
-    //public WordDto update{}
+    public WordDto update(String uuid, WordForm form){
+        WordEntity fromDB = repository.findOneByUuid(uuid)
+                .setWord(form.getWord())
+                .setCategory(categoryRepository.findOneByUuid(form.getCategoryUuid()));
+        return WordMapper.map(
+                repository.saveAndFlush(fromDB)
+        );
+    }
 
     public void delete(String uuid) {
         repository.delete(

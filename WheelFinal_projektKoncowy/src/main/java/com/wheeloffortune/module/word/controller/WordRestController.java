@@ -30,10 +30,10 @@ public class WordRestController {
         return service.create(form);
     }
 
-    //@PutMapping("/api/word/{uuid}")
-    //public WordDto updateWord(@PathVariable String uuid, @RequestBody WordForm form){
-    //    return service.update(uuid,form)
-    //}
+    @PutMapping("/api/word/{uuid}")
+    public WordDto updateWord(@PathVariable String uuid, @RequestBody WordForm form){
+        return service.update(uuid,form);
+    }
 
     @DeleteMapping("/api/word/{uuid}")
     public void deleteWord(@PathVariable String uuid){
