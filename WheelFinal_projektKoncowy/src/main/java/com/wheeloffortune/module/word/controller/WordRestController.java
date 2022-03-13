@@ -1,10 +1,12 @@
-package com.wheeloffortune.module.word;
+package com.wheeloffortune.module.word.controller;
 
 import com.wheeloffortune.module.word.dto.WordDto;
+import com.wheeloffortune.module.word.dto.WordForm;
 import com.wheeloffortune.module.word.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,10 +25,10 @@ public class WordRestController {
         return service.getOne(uuid);
     }
 
-    //@PostMapping("/api/word")
-    //public WordDto newWord(@RequestBody @Valid WordForm form){
-    //    return service.create(form)
-    //}
+    @PostMapping("/api/word")
+    public WordDto newWord(@RequestBody @Valid WordForm form){
+        return service.create(form);
+    }
 
     //@PutMapping("/api/word/{uuid}")
     //public WordDto updateWord(@PathVariable String uuid, @RequestBody WordForm form){
