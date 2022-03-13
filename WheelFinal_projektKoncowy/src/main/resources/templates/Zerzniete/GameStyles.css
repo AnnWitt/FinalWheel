@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -63,12 +58,12 @@
 *, ::after, ::before {
     box-sizing: border-box
 }
-
+/*
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth
     }
-}
+}*/
 
 body {
     margin: 0;
@@ -106,41 +101,41 @@ hr:not([size]) {
     font-size: calc(1.375rem + 1.5vw)
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .h1, h1 {
         font-size: 2.5rem
     }
-}
+}*/
 
 .h2, h2 {
     font-size: calc(1.325rem + .9vw)
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .h2, h2 {
         font-size: 2rem
     }
-}
+}*/
 
 .h3, h3 {
     font-size: calc(1.3rem + .6vw)
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .h3, h3 {
         font-size: 1.75rem
     }
-}
+}*/
 
 .h4, h4 {
     font-size: calc(1.275rem + .3vw)
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .h4, h4 {
         font-size: 1.5rem
     }
-}
+}*/
 
 .h5, h5 {
     font-size: 1.25rem
@@ -385,11 +380,11 @@ legend {
     line-height: inherit
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     legend {
         font-size: 1.5rem
     }
-}
+}*/
 
 legend + * {
     clear: left
@@ -460,12 +455,12 @@ progress {
     font-weight: 300;
     line-height: 1.2
 }
-
+/*
 @media (min-width: 1200px) {
     .display-1 {
         font-size: 5rem
     }
-}
+}*/
 
 .display-2 {
     font-size: calc(1.575rem + 3.9vw);
@@ -473,11 +468,11 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .display-2 {
         font-size: 4.5rem
     }
-}
+}*/
 
 .display-3 {
     font-size: calc(1.525rem + 3.3vw);
@@ -485,11 +480,13 @@ progress {
     line-height: 1.2
 }
 
+/*
 @media (min-width: 1200px) {
     .display-3 {
         font-size: 4rem
     }
 }
+*/
 
 .display-4 {
     font-size: calc(1.475rem + 2.7vw);
@@ -497,11 +494,11 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .display-4 {
         font-size: 3.5rem
     }
-}
+}*/
 
 .display-5 {
     font-size: calc(1.425rem + 2.1vw);
@@ -509,11 +506,11 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .display-5 {
         font-size: 3rem
     }
-}
+}*/
 
 .display-6 {
     font-size: calc(1.375rem + 1.5vw);
@@ -521,11 +518,11 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .display-6 {
         font-size: 2.5rem
     }
-}
+}*/
 
 .list-unstyled {
     padding-left: 0;
@@ -600,17 +597,15 @@ progress {
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto
+    /*padding-right: var(--bs-gutter-x, .75rem);*/
+   /* padding-left: var(--bs-gutter-x, .75rem);*/
+/*    margin-right: auto;
+    margin-left: auto*/
 }
 
 
-.containerPIC {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-}
+
+/*
 
 @media (min-width: 576px) {
     .container, .container-sm {
@@ -641,6 +636,7 @@ progress {
         max-width: 1320px
     }
 }
+*/
 
 .row {
     --bs-gutter-x: 1.5rem;
@@ -664,6 +660,7 @@ progress {
 .col {
     flex: 1 0 0%
 }
+
 
 .row-cols-auto > * {
     flex: 0 0 auto;
@@ -856,7 +853,7 @@ progress {
 .g-5, .gy-5 {
     --bs-gutter-y: 3rem
 }
-
+/*
 @media (min-width: 576px) {
     .col-sm {
         flex: 1 0 0%
@@ -1057,7 +1054,7 @@ progress {
     .g-sm-5, .gy-sm-5 {
         --bs-gutter-y: 3rem
     }
-}
+}*/
 
 @media (min-width: 768px) {
     .col-md {
@@ -1260,8 +1257,8 @@ progress {
         --bs-gutter-y: 3rem
     }
 }
-
-@media (min-width: 992px) {
+/*------------*/
+/*@media (min-width: 992px) {
     .col-lg {
         flex: 1 0 0%
     }
@@ -1865,7 +1862,7 @@ progress {
     .g-xxl-5, .gy-xxl-5 {
         --bs-gutter-y: 3rem
     }
-}
+}*/
 
 .table {
     --bs-table-bg: transparent;
@@ -4731,9 +4728,19 @@ textarea.form-control-lg {
     margin-bottom: 0
 }
 
-.card-text:last-child {
-    margin-bottom: 0
+.card-text {
+    margin-bottom: 0;
+    width: 100%;
+    border-style: solid;
+    background-color: #a4060d;
 }
+
+.card-text2 {
+    width: available;
+    border-style: solid;
+    background-color: #0a3d0a;
+}
+
 
 .card-link + .card-link {
     margin-left: 1rem
@@ -7282,7 +7289,7 @@ textarea.form-control-lg {
 }
 
 .border-navy {
-    border-color: #1234af !important
+    border-color: #1234af !important;
     border-style: ridge;
 
 }
@@ -11732,10 +11739,30 @@ textarea.form-control-lg {
 }
 
 .panel{
+    float: left;
     display: flex;
     justify-content: center;
-    float: right;
     margin-left: 20%;
-    position: absolute;
+
+}
+
+.containerPIC {
+    width: 100%;
+    float: left;
+    padding-right: var(--bs-gutter-x, .75rem);
+}
+
+
+
+.a1 {
+    background-color: #6f42c1;
+/*    float: left;*/
+    width: 105%;
+}
+
+.a2 {
+    background-color: #0a58ca;
+/*    float: right;*/
+    width: 300%;
 }
 /*# sourceMappingURL=bootstrap.min.css.map */

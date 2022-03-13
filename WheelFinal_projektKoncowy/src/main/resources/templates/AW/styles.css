@@ -97,6 +97,8 @@ nav{
     justify-content: right;
     width:20%;
     border-style: ridge;
+    display: block;
+    float: left;
 }
 
 article{
@@ -104,4 +106,10 @@ article{
     border-style: ridge;
     justify-content: right;
     width:20%;
+    display: block;
+    float: left;
+}
+
+footer {
+    clear: both;
 }
