@@ -20,17 +20,17 @@ public class WordService {
         );
     }
 
-    public WordDto getOne(Long id ){
-        return repository.findById(id)
-                .map(WordMapper::map)
-                .get();
+    public WordDto getOne(String uuid){
+        return WordMapper.map(
+                repository.findOneByUuid(uuid)
+        );
     }
 
     //public WordDto create{}
 
-    public void delete(Long id) {
+    public void delete(String uuid) {
         repository.delete(
-                repository.getById(id)
+                repository.findOneByUuid(uuid)
         );
     }
 }

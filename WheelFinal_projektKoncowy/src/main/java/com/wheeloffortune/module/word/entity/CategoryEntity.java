@@ -11,10 +11,14 @@ public class CategoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String uuid;
     private String name;
     @OneToMany (mappedBy = "category")
     private Set<WordEntity> words;
 
+    public String getUuid() {
+        return uuid;
+    }
 
     public Long getId() {
         return id;
