@@ -6,12 +6,13 @@ public class WordDto {
 
     private String uuid;
     private String word;
-    private CategoryDto category;
+    private String categoryName;
 
-    public WordDto(String uuid, String word, CategoryDto category) {
-        this.uuid = UUID.randomUUID().toString();
+
+    public WordDto(String uuid, String word, String categoryName) {
+        this.uuid = uuid;
         this.word = word;
-        this.category = category;
+        this.categoryName = categoryName;
     }
 
     public String getUuid() {
@@ -22,7 +23,7 @@ public class WordDto {
         return word;
     }
 
-    public CategoryDto getCategory() {
-        return category;
+    public String getCategoryName() {
+        return categoryName;
     }
 }

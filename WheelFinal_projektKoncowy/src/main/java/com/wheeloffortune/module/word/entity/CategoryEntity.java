@@ -1,7 +1,7 @@
 package com.wheeloffortune.module.word.entity;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -13,15 +13,15 @@ public class CategoryEntity {
     private Long id;
     private String uuid;
     private String name;
-    @OneToMany (mappedBy = "category", cascade = CascadeType.ALL)
-    private List<WordEntity> wordlist;
-
-    public Long getId() {
-        return id;
-    }
+    @OneToMany (mappedBy = "category")
+    private Set<WordEntity> words;
 
     public String getUuid() {
         return uuid;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public CategoryEntity setId(Long id) {
@@ -38,12 +38,12 @@ public class CategoryEntity {
         return this;
     }
 
-    public List<WordEntity> getWordlist() {
-        return wordlist;
+    public Set<WordEntity> getWords() {
+        return words;
     }
 
-    public CategoryEntity setWordlist(List<WordEntity> wordlist) {
-        this.wordlist = wordlist;
+    public CategoryEntity setWords(Set<WordEntity> words) {
+        this.words = words;
         return this;
     }
 }

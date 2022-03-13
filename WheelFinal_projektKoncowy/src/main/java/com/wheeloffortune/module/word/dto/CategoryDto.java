@@ -2,19 +2,20 @@ package com.wheeloffortune.module.word.dto;
 
 import com.wheeloffortune.module.word.entity.WordEntity;
 
-import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class CategoryDto {
 
     private String uuid;
     private String name;
-    private List<WordEntity> wordList;
+    private Set<WordEntity> words;
 
-    public CategoryDto(String uuid, String name, List<WordEntity> wordList) {
-        this.uuid = UUID.randomUUID().toString();
+
+    public CategoryDto(String uuid, String name, Set<WordEntity> words) {
+        this.uuid = uuid;
         this.name = name;
-        this.wordList = wordList;
+        this.words = words;
     }
 
     public String getUuid() {
@@ -25,7 +26,7 @@ public class CategoryDto {
         return name;
     }
 
-    public List<WordEntity> getWordList() {
-        return wordList;
+    public Set<WordEntity> getWords() {
+        return words;
     }
 }

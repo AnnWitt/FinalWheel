@@ -1,12 +1,15 @@
 package com.wheeloffortune.module.word.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 
 @Entity
 @Table(name = "word")
+@JsonIgnoreProperties("category")
 public class WordEntity {
 
     @Id
@@ -15,17 +18,22 @@ public class WordEntity {
     private String uuid;
     private String word;
     @ManyToOne
-    @JoinColumn(name="wordlist")
+    @JoinColumn(name = "category_id")
     private CategoryEntity category;
     @OneToOne
     private WheelOfFortuneEntity wheelOfFortune;
 
-    public Long getId() {
-        return id;
-    }
-
     public String getUuid() {
         return uuid;
+    }
+
+    public WordEntity setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public WordEntity setId(Long id) {

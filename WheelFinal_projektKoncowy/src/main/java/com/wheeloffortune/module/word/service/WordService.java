@@ -1,40 +1,61 @@
 package com.wheeloffortune.module.word.service;
 
+
 import com.wheeloffortune.module.word.dto.WordDto;
+import com.wheeloffortune.module.word.dto.WordForm;
+import com.wheeloffortune.module.word.entity.CategoryEntity;
+import com.wheeloffortune.module.word.entity.WordEntity;
+import com.wheeloffortune.module.word.mapper.CategoryMapper;
 import com.wheeloffortune.module.word.mapper.WordMapper;
+import com.wheeloffortune.module.word.repository.CategoryRepository;
 import com.wheeloffortune.module.word.repository.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class WordService {
+
     @Autowired
     private WordRepository repository;
 
-    public List<WordDto> all(){
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    public List<WordDto> getAll(){
         return WordMapper.map(
                 repository.findAll()
         );
     }
 
-    public WordDto one(String uuid){
-        return all().stream()
-                .filter(word -> word.getUuid().equals(uuid))
-                .findFirst()
-                .get();
+    public WordDto getOne(String uuid){
+        return WordMapper.map(
+                repository.findOneByUuid(uuid)
+        );
     }
 
-    //public WordDto create(){}
+    public WordDto create(WordForm form){
 
-    public void delete(String uuid){
+        CategoryEntity category = categoryRepository.findOneByUuid(form.getCategoryUuid());
+        WordEntity word = WordMapper.map(form, category);
+
+        return WordMapper.map(
+                repository.saveAndFlush(word)
+        );
+    }
+
+    public WordDto update(String uuid, WordForm form){
+        WordEntity fromDB = repository.findOneByUuid(uuid)
+                .setWord(form.getWord())
+                .setCategory(categoryRepository.findOneByUuid(form.getCategoryUuid()));
+        return WordMapper.map(
+                repository.saveAndFlush(fromDB)
+        );
+    }
+
+    public void delete(String uuid) {
         repository.delete(
-                repository.findAll()
-                        .stream()
-                        .filter(word -> word.getUuid().equals(uuid))
-                        .findFirst()
-                        .get()
+                repository.findOneByUuid(uuid)
         );
     }
 }
