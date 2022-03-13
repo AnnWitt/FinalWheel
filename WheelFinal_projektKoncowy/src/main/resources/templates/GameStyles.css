@@ -610,8 +610,6 @@ progress {
 .containerPIC {
     width: 100%;
     padding-right: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto
 }
 
 @media (min-width: 576px) {
@@ -11733,5 +11731,11 @@ textarea.form-control-lg {
     align-items: center;
 }
 
-
+.panel{
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-left: 20%;
+    position: absolute;
+}
 /*# sourceMappingURL=bootstrap.min.css.map */
