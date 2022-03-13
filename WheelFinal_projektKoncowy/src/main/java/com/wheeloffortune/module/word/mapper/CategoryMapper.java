@@ -1,12 +1,15 @@
 package com.wheeloffortune.module.word.mapper;
 
+import com.wheeloffortune.module.word.dto.CategoryDto;
 import com.wheeloffortune.module.word.dto.WordDto;
+import com.wheeloffortune.module.word.entity.CategoryEntity;
 
 public class CategoryMapper {
-    public static WordDto map(com.wheeloffortune.module.word.entity.WordEntity word){
-        return new WordDto(
-                word.getWord(),
-                WordMapper.map(word.getCategory())
+    public static CategoryDto map(CategoryEntity category) {
+        return new CategoryDto(
+                category.getName(),
+                category.getWords()
         );
     }
+
 }

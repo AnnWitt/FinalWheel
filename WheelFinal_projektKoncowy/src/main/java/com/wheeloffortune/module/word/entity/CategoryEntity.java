@@ -15,6 +15,7 @@ public class CategoryEntity {
     @OneToMany (mappedBy = "category")
     private Set<WordEntity> words;
 
+
     public Long getId() {
         return id;
     }

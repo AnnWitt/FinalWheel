@@ -1,5 +1,6 @@
 package com.wheeloffortune.module.word.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "word")
+@JsonIgnoreProperties("category")
 public class WordEntity {
 
     @Id
@@ -19,6 +21,7 @@ public class WordEntity {
     private CategoryEntity category;
     @OneToOne
     private WheelOfFortuneEntity wheelOfFortune;
+
 
     public Long getId() {
         return id;

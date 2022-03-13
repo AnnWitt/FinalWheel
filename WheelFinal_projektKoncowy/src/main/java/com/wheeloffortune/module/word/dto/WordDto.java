@@ -4,31 +4,19 @@ import java.util.UUID;
 
 public class WordDto {
 
-    private final String uuid;
     private String word;
-    private CategoryDto category;
+    private String categoryName;
 
-    public WordDto(String uuid, String word, CategoryDto category) {
-        this.uuid = uuid;
+    public WordDto(String word, String categoryName) {
         this.word = word;
-        this.category = category;
-    }
-
-    public WordDto(String word, CategoryDto category) {
-        this.uuid = UUID.randomUUID().toString();
-        this.word = word;
-        this.category = category;
-    }
-
-    public String getUuid() {
-        return uuid;
+        this.categoryName = categoryName;
     }
 
     public String getWord() {
         return word;
     }
 
-    public CategoryDto getCategory() {
-        return category;
+    public String getCategoryName() {
+        return categoryName;
     }
 }
