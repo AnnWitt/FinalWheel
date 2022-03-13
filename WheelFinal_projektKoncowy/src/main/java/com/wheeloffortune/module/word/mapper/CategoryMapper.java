@@ -8,6 +8,7 @@ public class CategoryMapper {
 
     public static CategoryDto map(CategoryEntity category) {
         return new CategoryDto(
+                category.getUuid(),
                 category.getName(),
                 category.getWords()
         );

@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class WordMapper {
     public static WordDto map(WordEntity word){
         return new WordDto(
+                word.getUuid(),
                 word.getWord(),
                 CategoryMapper.map(word.getCategory()).getName()
         );

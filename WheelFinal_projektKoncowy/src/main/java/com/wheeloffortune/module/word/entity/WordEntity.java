@@ -15,6 +15,7 @@ public class WordEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String uuid;
     private String word;
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -22,6 +23,14 @@ public class WordEntity {
     @OneToOne
     private WheelOfFortuneEntity wheelOfFortune;
 
+    public String getUuid() {
+        return uuid;
+    }
+
+    public WordEntity setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
 
     public Long getId() {
         return id;

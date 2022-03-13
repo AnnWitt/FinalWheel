@@ -3,10 +3,7 @@ package com.wheeloffortune.module.word;
 import com.wheeloffortune.module.word.dto.WordDto;
 import com.wheeloffortune.module.word.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,10 +18,23 @@ public class WordRestController {
         return service.getAll();
     }
 
-    @GetMapping("/api/word/{id}")
-    public WordDto getWord(@PathVariable Long id){
-        return service.getOne(id);
+    @GetMapping("/api/word/{uuid}")
+    public WordDto getWord(@PathVariable String uuid){
+        return service.getOne(uuid);
     }
 
+    //@PostMapping("/api/word")
+    //public WordDto newWord(@RequestBody @Valid WordForm form){
+    //    return service.create(form)
+    //}
 
+    //@PutMapping("/api/word/{uuid}")
+    //public WordDto updateWord(@PathVariable String uuid, @RequestBody WordForm form){
+    //    return service.update(uuid,form)
+    //}
+
+    @DeleteMapping("/api/word/{uuid}")
+    public void deleteWord(@PathVariable String uuid){
+        service.delete(uuid);
+    }
 }
