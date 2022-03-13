@@ -1,6 +1,7 @@
 package com.wheeloffortune.module.word.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 import java.util.UUID;
 
@@ -15,6 +16,11 @@ public class CategoryEntity {
     private String name;
     @OneToMany (mappedBy = "category")
     private Set<WordEntity> words;
+
+    public CategoryEntity setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
 
     public String getUuid() {
         return uuid;
