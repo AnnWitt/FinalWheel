@@ -11,5 +11,4 @@ public class GameBootController {
     public String getHome() {
         return "Game.html";
     }
-
 }
