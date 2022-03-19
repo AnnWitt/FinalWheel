@@ -29,7 +29,7 @@ public class GameBootController {
 
     @GetMapping("/score")
     public String getScore() {
-        return "front/fragments/scoreTable.html";
+        return "front/fragments/scores.html";
     }
 
     @GetMapping("/default")
