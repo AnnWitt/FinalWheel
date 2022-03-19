@@ -1,11 +1,11 @@
 body {
     background-color: #000000;
-    border-color: #1234af;
+    border-color: #000000;
     border-style: solid;
 }
 
 .buttonEmpty {
-/*    image-orientation: 0;*/
+    /*    image-orientation: 0;*/
     background-color: #b2d7b2; /*ma byc bialy*/
     border-color: #ffffff;
     border-style: solid;
@@ -15,9 +15,10 @@ body {
 
 
 }
-.buttonInactive{
+
+.buttonInactive {
     font-size: +20px;
- /*   image-orientation: 0;*/
+    /*   image-orientation: 0;*/
     color: #423e3e;
     background-color: #6c766f;
     border-color: #ffffff;
@@ -29,9 +30,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-.buttonActive{
+
+.buttonActive {
     font-size: +20px;
- /*   image-orientation: 0;*/
+    /*   image-orientation: 0;*/
     color: #ffffff;
     background-color: #a4060d;
     border-color: #ffffff;
@@ -43,9 +45,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .letterKnown {
     font-size: +20px;
-/*    image-orientation: 0;*/
+    /*    image-orientation: 0;*/
     color: #070907;
     background-color: #54bb98;
     border-color: #dae5da;
@@ -57,9 +60,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .letterUnknown {
     font-size: +20px;
-/*    image-orientation: 0;*/
+    /*    image-orientation: 0;*/
     color: #ffffff;
     background-color: #103f10;
     border-color: #ffffff;
@@ -72,50 +76,76 @@ body {
     align-items: center;
 }
 
-.MenuButtons {
+.menu {
     display: flex;
-    color: #ffffff;
-    background-color: #091960;
+    background-color: #ffffff;
     border-style: solid;
-    font-weight: bold;
     padding: 10px;
-    border-color: #1234af
-
+    border-color: #000000;
+    font-family: ShlopShloppy-Regular;
+    font-style: italic;
+    font-weight: bolder;
+    color: maroon;
 }
 
-.pictureFormat{
+
+/*https://cssgradient.io/*/
+.dynamic {
+    border-style: solid;
+    border-color: #000000;
+    padding-top: 1px;
+    float: right;
+    width: 84.6%;
+}
+
+.pictureFormat {
     float: left;
-    width:25%;
-    align-items: center;
-    border-color: #1234af;
-    background-color: #1234af;
+    width: 17.4%;
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+    vertical-align: middle;
+    border-color: #000000;
+    background-color: #ffffff;
     border-style: solid;
 }
 
-.banner{
+.banner {
     display: flex;
     float: right;
-    width:100%;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 51px;
-justify-content: center;
+    width: 100%;
+    justify-content: center;
     text-align: center;
-    color: #dae5da;
-    background-color: #091960;
-    border-style: ridge;
-    border-color: #1234af
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #000000;
+
 }
 
-.lettersPanel{
+.bannerText {
+    font-weight: bolder;
+    font-style: italic;
+    padding-top: 3%;
+    font-size: 70px;
+    font-family: ShlopShloppy-Regular;
+    color: maroon;
+}
+
+
+@import url(//db.onlinewebfonts.com/c/bb45f7c1aa890db9f527bc3790fc8c52?family=ShlopShloppy-Regular);
+/*https://www.onlinewebfonts.com/download/bb45f7c1aa890db9f527bc3790fc8c52*/
+
+@font-face {
+    font-family: "ShlopShloppy-Regular";
+    src: url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.eot");
+    src: url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.woff") format("woff"), url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bb45f7c1aa890db9f527bc3790fc8c52.svg#ShlopShloppy-Regular") format("svg");
+}
+
+.lettersPanel {
     display: flex;
     float: right;
-    width:100%;
-   /* background-color: #1234af;*/
+    width: 100%;
     background-color: chartreuse;
- /*   border-style: ridge;
-    border-color: #1234af;
-    border-style: solid;*/
 }
 
 .admin {
@@ -126,29 +156,20 @@ justify-content: center;
     background-color: indigo;
 }
 
-.default{
+.default {
     background-color: maroon;
 }
 
-header{
-    display: flex;}
-
-nav{
-    justify-content: right;
-    width:20%;
-    border-style: ridge;
-    border-color: #1234af;
-    display: block;
-    float: left;
+header {
+    display: flex;
 }
 
-article{
-    border-style: ridge;
+nav {
     justify-content: right;
-    width:79.2%;
-/*    przy 80% spadał do niższego "rzedu"*/
+    width: 15%;
+    border-color: #000000;
     display: block;
-    float: right;
+    float: left;
 }
 
 .playerCL {
@@ -157,9 +178,29 @@ article{
 
 footer {
     clear: both;
-    background-color: #1234af
+    padding: 5px;
+    border-color: #000000;
+    color: maroon;
+    border-style: solid;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: #ffffff;
+    font-family: ShlopShloppy-Regular;
+    display: flex;
 }
 
-.fragPlayground{
+.fragPlayground {
     background-color: #103f10;
 }
+
+a {
+    text-decoration: none;
+    color: maroon;
+}
+
+
+/*
+:link hiperłącze nieodwiedzone (ang. unvisited link),
+:visited hiperłącze odwiedzone (ang. visited link),
+:hover hiperłącze, na którym jest kursor (ang. mouse over link),
+:active hiperłącze, na który właśnie klikamy (ang. selected link).*/
