@@ -1,5 +1,7 @@
 body {
     background-color: #000000;
+    border-color: #1234af;
+    border-style: solid;
 }
 
 .buttonEmpty {
@@ -90,7 +92,7 @@ body {
     border-style: solid;
 }
 
-.startPanel{
+.banner{
     display: flex;
     float: right;
     width:100%;
@@ -105,13 +107,27 @@ justify-content: center;
     border-color: #1234af
 }
 
-.gamePanel{
+.lettersPanel{
     display: flex;
     float: right;
     width:100%;
-    background-color: #091960;
-    border-style: ridge;
-    border-color: #1234af
+   /* background-color: #1234af;*/
+    background-color: chartreuse;
+ /*   border-style: ridge;
+    border-color: #1234af;
+    border-style: solid;*/
+}
+
+.admin {
+    background-color: coral;
+}
+
+.score {
+    background-color: indigo;
+}
+
+.default{
+    background-color: maroon;
 }
 
 header{
@@ -135,7 +151,15 @@ article{
     float: right;
 }
 
+.playerCL {
+    background-color: #a4060d;
+}
+
 footer {
     clear: both;
     background-color: #1234af
+}
+
+.fragPlayground{
+    background-color: #103f10;
 }
