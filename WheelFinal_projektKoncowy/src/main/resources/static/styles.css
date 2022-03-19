@@ -1,6 +1,5 @@
 body {
-    //background-color: #000000;
-    background-color: #59692b;
+    background-color: #000000;
 }
 
 .buttonEmpty {
@@ -74,53 +73,60 @@ body {
 .MenuButtons {
     display: flex;
     color: #ffffff;
-    background-color: #103f10;
-    border-color: #ffffff;
+    background-color: #091960;
     border-style: solid;
     font-weight: bold;
     padding: 10px;
-
-
+    border-color: #1234af
 
 }
-
-
 
 .pictureFormat{
-    /*border-style: ridge;*/
     float: left;
-    width:25.5%;
-    background-color: #6f42c1;
+    width:25%;
+    align-items: center;
+    border-color: #1234af;
+    background-color: #1234af;
+    border-style: solid;
 }
 
-.panel{
+.startPanel{
     display: flex;
-   /* display: flex; -- Później aby przyciski byly razem*/
- /*   justify-content: center;*/
     float: right;
     width:100%;
-    background-color: #0c4128;
-}
-
-header{
-    display: flex;
-/*    justify-content: left;*/
-/*    align-items: center;*/
+    font-weight: bold;
+    font-style: italic;
+    font-size: 51px;
+justify-content: center;
+    text-align: center;
+    color: #dae5da;
+    background-color: #091960;
     border-style: ridge;
     border-color: #1234af
 }
 
+.gamePanel{
+    display: flex;
+    float: right;
+    width:100%;
+    background-color: #091960;
+    border-style: ridge;
+    border-color: #1234af
+}
+
+header{
+    display: flex;}
+
 nav{
-    color: #4b1a1e;
     justify-content: right;
     width:20%;
     border-style: ridge;
+    border-color: #1234af;
     display: block;
     float: left;
 }
 
 article{
-    color: #0a3d0a;
     border-style: ridge;
     justify-content: right;
     width:79.2%;
@@ -131,33 +137,5 @@ article{
 
 footer {
     clear: both;
-    background-color: #523e02;
+    background-color: #1234af
 }
-
-
-/*
-.pictureFormat{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    border-style: ridge;
-    float: left;
-    !*   width:20%;*!
-    background-color: #6f42c1;
-
-}
-
-.panel{
-    justify-content: center;
-    float: right;
-    width:40%;
-    background-color: #0c4128;
-}
-
-header{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    border-style: ridge;
-    border-color: #1234af
-}*/
