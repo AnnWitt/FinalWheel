@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<div class="panel" th:fragment="fragPanel"> panel z html</div>
+<div class="panel" th:fragment="fragPanel">
+        <p class="buttonEmpty"></p> <!--wypelniacz-->
+        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
+        <p class="buttonEmpty"></p> <!--wypelniacz-->
+        <p class="buttonActive">2</p> <!--Panel: litera do sprawdzenia-->
+        <p class="letterKnown">3</p> <!--Hasło: zgadnięta litera-->
+        <p class="letterUnknown">-</p> <!--Hasło: nieznana litera-->
+        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
+        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
+</div>
 </body>
 </html>
