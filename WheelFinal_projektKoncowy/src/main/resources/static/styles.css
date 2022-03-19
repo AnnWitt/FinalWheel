@@ -1,6 +1,6 @@
 body {
-    background-color: #462809;
-    border-color: #462809;
+    background-color: #000000;
+    border-color: #000000;
     border-style: solid;
 }
 
@@ -78,25 +78,21 @@ body {
 
 .menu {
     display: flex;
-   /* color: #ffffff;*/
     background-color: #ffffff;
     border-style: solid;
     padding: 10px;
-    border-color: #462809;
-}
-
-.menufont{
+    border-color: #000000;
     font-family: ShlopShloppy-Regular;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(154,12,12,1) 21%);
-    background-clip: content-box;
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: bolder;
+    color: maroon;
 }
 
+
+/*https://cssgradient.io/*/
 .dynamic {
     border-style: solid;
-    border-color: #462809;
+    border-color: #000000;
     padding-top: 1px;
     float: right;
     width: 84.6%;
@@ -105,11 +101,11 @@ body {
 .pictureFormat {
     float: left;
     width: 17.4%;
-    border-color: #462809;
+    border-color: #000000;
     border-style: solid;
     text-align: center;
     vertical-align: middle;
-    border-color: #462809;
+    border-color: #000000;
     background-color: #ffffff;
     border-style: solid;
 }
@@ -120,23 +116,19 @@ body {
     width: 100%;
     justify-content: center;
     text-align: center;
-    /*background-color: #774719;*/
     background-color: #ffffff;
     border-style: solid;
-    border-color: #462809;
-    /*background: linear-gradient(to right, #00629B, #DAAA00);*/
+    border-color: #000000;
+
 }
 
-.grad {
-    font-weight: bold;
+.bannerText {
+    font-weight: bolder;
     font-style: italic;
     padding-top: 3%;
     font-size: 70px;
     font-family: ShlopShloppy-Regular;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(154,12,12,1) 21%);
-    background-clip: content-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: maroon;
 }
 
 
@@ -175,7 +167,7 @@ header {
 nav {
     justify-content: right;
     width: 15%;
-    border-color: #462809;
+    border-color: #000000;
     display: block;
     float: left;
 }
@@ -186,10 +178,15 @@ nav {
 
 footer {
     clear: both;
-    padding: 2px;
-    margin-left: 1.8px;
-    border-color: #462809;
-    background-color: #774719;
+    padding: 5px;
+    border-color: #000000;
+    color: maroon;
+    border-style: solid;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: #ffffff;
+    font-family: ShlopShloppy-Regular;
+    display: flex;
 }
 
 .fragPlayground {
@@ -198,7 +195,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: maroon;
 }
 
 
