@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GameBootController {
 
-    @GetMapping("/index.html")
+    @GetMapping("/")
     public String getHome() {
-        return "Game.html";
+        return "front/IndexWheel.html";
     }
 
 }
