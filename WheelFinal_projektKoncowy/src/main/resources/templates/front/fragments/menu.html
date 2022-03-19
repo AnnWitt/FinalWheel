@@ -8,10 +8,14 @@
 <body>
 <!--<footer th:fragment="dupa"> ...copyright ... </footer>-->
 <nav th:fragment="fragMenu">
-    <span class="MenuButtons"><a href="game">Gra</a></span>
-    <span class="MenuButtons"><a href="player">Wybierz gracza</a></span><!--Tu będzie tabela pkt z mozliwoscia założenia nowego gracxza-->
-    <span class="MenuButtons"><a href="admin">Panel adm</a></span>
-    <span class="MenuButtons"><a href="score">Score table</a></span>
+    <div class="menu">
+    <p class="menufont"><a href="game">Game</a></p>
+       </br>
+    <p class="menufont"><a href="player">Player</a></p><!--Tu będzie tabela pkt z mozliwoscia założenia nowego gracxza-->
+    <p class="menufont"><a href="admin">Admin</a></p>
+        <p>-</p>
+    <p class="menufont"><a href="score">Scores</a></p>
+    </div>
 </nav>
 </body>
 </html>

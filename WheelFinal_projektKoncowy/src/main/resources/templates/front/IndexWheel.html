@@ -13,14 +13,14 @@
 <nav th:replace="front/fragments/menu :: fragMenu">
 </nav>
 
+<section class="dynamic">
 <!--nasza część dynamiczna-->
-
 <div class="default" th:fragment="default"> ...default... </div>
 <div class="fragGame" th:fragment="fragGame"> ...Game... </div>
 <div class="playerCL" th:fragment="playerCL"> ...player... </div>
 <div class="score" th:fragment="score"> ...score... </div>
 <div class="admin" th:fragment="admin"> ...coadmin... </div>
-
+</section>
 <!--koniec dynamicznej-->
 <footer th:replace="front/fragments/footer :: fragFooter"></footer>
 </body>
