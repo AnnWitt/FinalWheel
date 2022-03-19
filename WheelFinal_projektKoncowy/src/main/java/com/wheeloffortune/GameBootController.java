@@ -12,9 +12,16 @@ public class GameBootController {
         return "front/IndexWheel.html";
     }
 
+
+
+    @GetMapping("/footer.html")
+    public String getHomeFooter() {
+        return "fragments/footer.html";
+    }
+
     //budowanie szkieletu aby tylko poparować. Do powielenia w odpowiednich miejscach w IndexWheel po uporządkowaniu sprawy css
-    @GetMapping("/Experimental.html")
+/*    @GetMapping("/Experimental.html")
     public String getHomeExp() {
         return "front/Experimental.html";
-    }
+    }*/
 }
