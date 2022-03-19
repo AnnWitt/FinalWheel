@@ -7,41 +7,25 @@
 </head>
 <body>
 <header>
-
     <!--Tu logo + literki do wybierania-->
-    <div class="pictureFormat">
-        <img src="wheel.jpg" width="100%"></div>
-    <div class="panel">
-        <p class="buttonEmpty"></p> <!--wypelniacz-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
-        <p class="buttonEmpty"></p> <!--wypelniacz-->
-        <p class="buttonActive">2</p> <!--Panel: litera do sprawdzenia-->
-        <p class="letterKnown">3</p> <!--Hasło: zgadnięta litera-->
-        <p class="letterUnknown">-</p> <!--Hasło: nieznana litera-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
-    </div>
-    <!--  </div>-->
+    <div class="pictureFormat" th:replace="front/fragments/picture :: fragPicture"></div>
+    <div class="panel" th:replace="front/fragments/panel :: fragPanel"></div>
+
+
+<!--    <div class="panel">
+        <p class="buttonEmpty"></p> &lt;!&ndash;wypelniacz&ndash;&gt;
+        <p class="buttonInactive">1</p> &lt;!&ndash;Panel: litera już była sprawdzana&ndash;&gt;
+        <p class="buttonEmpty"></p> &lt;!&ndash;wypelniacz&ndash;&gt;
+        <p class="buttonActive">2</p> &lt;!&ndash;Panel: litera do sprawdzenia&ndash;&gt;
+        <p class="letterKnown">3</p> &lt;!&ndash;Hasło: zgadnięta litera&ndash;&gt;
+        <p class="letterUnknown">-</p> &lt;!&ndash;Hasło: nieznana litera&ndash;&gt;
+        <p class="buttonInactive">1</p> &lt;!&ndash;Panel: litera już była sprawdzana&ndash;&gt;
+        <p class="buttonInactive">1</p> &lt;!&ndash;Panel: litera już była sprawdzana&ndash;&gt;
+    </div>-->
 </header>
-
-<nav>
-    <!-- Tu będzie menu, zrob dla nich przyciski z labelkamim //poruszanie sie po stronie-->
-
-        <span class="MenuButtons">Nowa Gra</span>
-        <span class="MenuButtons">Wybierz gracza</span><!--Tu będzie tabela pkt z mozliwoscia założenia nowego gracxza-->
-        <span class="MenuButtons">Panel adm</span>
-        <span class="MenuButtons">Score table</span>
-
+<nav th:replace="front/fragments/menu :: fragMenu">
 </nav>
-
-<article>
-
-    Tu będzie konsola gry
-
-</article>
-
-
-<footer>footer Dupa</footer>
-
+<div class="playerCL" th:replace="front/fragments/player :: fragPlayer"></div>
+<footer th:replace="front/fragments/footer :: fragFooter"></footer>
 </body>
 </html>
