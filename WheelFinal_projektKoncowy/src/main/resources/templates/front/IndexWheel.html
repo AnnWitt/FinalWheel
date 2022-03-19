@@ -7,13 +7,25 @@
 </head>
 <body>
 <header>
-    <!--Tu logo + literki do wybierania-->
     <div class="pictureFormat" th:replace="front/fragments/picture :: fragPicture"></div>
-    <div class="panel" th:replace="front/fragments/panel :: fragPanel"></div>
+    <div class="banner" th:replace="front/fragments/banner :: fragBanner"></div>
 </header>
 <nav th:replace="front/fragments/menu :: fragMenu">
 </nav>
-<div class="playerCL" th:replace="front/fragments/player :: fragPlayer"></div>
+
+<!--nasza część dynamiczna-->
+
+<!--<div class="playerCL" th:replace="front/fragments/player :: fragPlayer"></div>-->
+<div class="default" th:fragment="default"> ...default... </div>
+<div class="fragGame" th:fragment="fragGame"> ...Game... </div>
+<div class="playerCL" th:fragment="playerCL"> ...player... </div>
+<div class="score" th:fragment="score"> ...score... </div>
+<div class="admin" th:fragment="admin"> ...coadmin... </div>
+<!--To bedzie trzeba razem - game będzie kontenerem dla letters i playground-->
+
+<!--koniec dynamicznej-->
 <footer th:replace="front/fragments/footer :: fragFooter"></footer>
+
+
 </body>
 </html>

@@ -1,10 +1,17 @@
+<!--
+tu zlepimy letters i playground-->
 
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type=text/css href="styles.css">
 <head>
     <meta charset="UTF-8">
 </head>
 <body>
-<footer th:fragment="fragFooter"> ...copyright ... </footer>
+
+<div class="fragGame" th:fragment=fragGame>
+    <div class="lettersPanel" th:replace="front/fragments/letters :: lettersPanel"></div>
+    <div class="fragPlayground" th:replace="front/fragments/playground :: fragPlayground"></div>
+</div>
 </body>
 </html>
