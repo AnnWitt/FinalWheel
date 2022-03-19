@@ -41,7 +41,7 @@ public class CategoryService {
         CategoryEntity fromDB = repository.findOneByUuid(uuid)
                 .setName(form.getName());
         if (!form.getWords().isEmpty()) {
-            form.setWords(form.getWords());
+            fromDB.setWords(form.getWords());
         }
         return CategoryMapper.map(
                 repository.saveAndFlush(fromDB)

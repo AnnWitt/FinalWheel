@@ -1,7 +1,6 @@
 package com.wheeloffortune.module.word.repository;
 
 import com.wheeloffortune.module.word.entity.WordEntity;
-import com.wheeloffortune.module.word.mapper.WordMapper;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
