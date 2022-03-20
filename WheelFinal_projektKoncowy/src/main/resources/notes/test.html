@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type=text/css href="test.css">
+    <title>Title</title>
+</head>
+<body>
+<p>tekst</p>
+
+<div class="any1">
+    Any 1
+</div>
+<div class="any2">
+    Any 2
+</div>
+
+<div class="any3" onclick="toggleClock()" id="d">divem</div>-->
+
+<button onclick="shoot()">Take the Shot!</button>
+
+<button onclick="hideDupa(this)">Take the Shot!</button>
+
+<p>test</p>
+<label onclick="hideDupa(this)">Znika siebie</label>
+
+<script>
+    function hideDupa(klasa) {
+        klasa.style.display='none'
+    }
+</script>
+
+<script>
+    function showDupa(klasa) {
+        klasa.style.display='block'
+    }
+</script>
+
+<section><div class="content1" id="c1"> content1 </div></section>
+<label><div class="content2"> content2 </div></label>
+<div class="content3"> content3 </div>
+
+<label onclick="showDupa('c1')">pokazuje coś innego</label>
+
+<hr/>
+
+
+
+<script type="text/javascript">
+    for (i = 65; i < 91; i++) {
+     /*   document.write(i + " ");*/
+        document.write(String.fromCharCode(i) + " ");
+    }
+    var litera;
+    document.write("<br>")
+    litera=String.fromCharCode(70)
+    document.write("<br>")
+    /*litera.style.color = "#006600";*/
+    document.write(litera + " <-- wybrana litera")
+</script>
+
+<!--asci 65 - 90, 140,143, 163, 165, 175, 198, 202, 209, 211-->
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+.any1 {
+    background-color: #a4060d;
+    color: #dae5da;
+    display: none;
+    /*display: none; -> znika */
+}
+
+.any2 {
+    display: block;
+    background-color: #30a930;
+}
+
+.any3 {
+    background-color: #1234af;
+}
+
+.content1 {
+    background-color: #1234af;
+    display: none;
+}
+
+.content2 {
+    background-color: #30a930;
+    display: none;
+}
+
+.content3 {
+    background-color: #a4060d;
+    display: none;
+}
+
+.letter {
+    background-color: #a4060d;
+}
