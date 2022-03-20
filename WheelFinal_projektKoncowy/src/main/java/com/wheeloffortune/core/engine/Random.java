@@ -21,7 +21,8 @@ public class Random {
         return categoryService.getAll().stream().findAny().get().getUuid();
     }
 
-    public Optional<WordDto> generateRNGWord(String categoryUuid){
+    public Optional<WordDto> generateRNGWord(){
+        String categoryUuid = generateRNGCategory();
         return wordService.getAll().stream().filter(word -> categoryService.getOne(categoryUuid).getName().equals(word.getCategoryName())).findAny();
     }
 }
