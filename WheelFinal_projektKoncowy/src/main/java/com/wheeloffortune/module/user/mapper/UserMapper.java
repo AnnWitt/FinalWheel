@@ -4,11 +4,6 @@ import com.wheeloffortune.module.game.mapper.WOTMapper;
 import com.wheeloffortune.module.user.dto.UserDto;
 import com.wheeloffortune.module.user.dto.UserForm;
 import com.wheeloffortune.module.user.entity.UserEntity;
-import com.wheeloffortune.module.user.reposytory.UserRepository;
-import com.wheeloffortune.module.user.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
