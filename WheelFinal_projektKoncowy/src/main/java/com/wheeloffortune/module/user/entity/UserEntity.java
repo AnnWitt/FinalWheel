@@ -1,7 +1,7 @@
 package com.wheeloffortune.module.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
+import com.wheeloffortune.module.game.entity.WOTEntity;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -17,7 +17,7 @@ public class UserEntity {
     private String uuid;
     private String username;
     @ManyToMany(mappedBy = "players")
-    private Set<WheelOfFortuneEntity> wheelOfFortune;
+    private Set<WOTEntity> wheelOfFortune;
 
     public Long getId() {
         return id;
@@ -46,11 +46,11 @@ public class UserEntity {
         return this;
     }
 
-    public Set<WheelOfFortuneEntity> getWheelOfFortune() {
+    public Set<WOTEntity> getWheelOfFortune() {
         return wheelOfFortune;
     }
 
-    public UserEntity setWheelOfFortune(Set<WheelOfFortuneEntity> wheelOfFortune) {
+    public UserEntity setWheelOfFortune(Set<WOTEntity> wheelOfFortune) {
         this.wheelOfFortune = wheelOfFortune;
         return this;
     }

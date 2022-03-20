@@ -1,14 +1,19 @@
 package com.wheeloffortune.module.word.mapper;
 
+import com.wheeloffortune.module.game.mapper.WOTMapper;
 import com.wheeloffortune.module.word.dto.WordDto;
 import com.wheeloffortune.module.word.dto.WordForm;
 import com.wheeloffortune.module.word.entity.CategoryEntity;
 import com.wheeloffortune.module.word.entity.WordEntity;
+import com.wheeloffortune.module.word.repository.WordRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class WordMapper {
+
     public static WordDto map(WordEntity word){
         return new WordDto(
                 word.getUuid(),
@@ -30,4 +35,12 @@ public class WordMapper {
                 .setCategory(category);
 
     }
+
+    public static String mapToString(WordEntity word){
+        if(word == null){
+            return "";
+        }
+        return word.getUuid();
+    }
+
 }
