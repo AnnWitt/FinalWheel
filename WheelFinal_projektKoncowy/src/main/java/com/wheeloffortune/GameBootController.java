@@ -14,22 +14,22 @@ public class GameBootController {
 
     @GetMapping("/game")
     public String getGame() {
-        return "ront/fragments/dynamic/dynamicElements/game.html";
+        return "front/fragments/dynamic/dynamicElements/game.html";
     }
 
     @GetMapping("/player")
     public String getPlayer() {
-        return "ront/fragments/dynamic/dynamicElements/player.html";
+        return "front/fragments/dynamic/dynamicElements/player.html";
     }
 
     @GetMapping("/admin")
     public String getAdmin() {
-        return "ront/fragments/dynamic/dynamicElements/admin.html";
+        return "front/fragments/dynamic/dynamicElements/admin.html";
     }
 
     @GetMapping("/score")
     public String getScore() {
-        return "ront/fragments/dynamic/dynamicElements/scores.html";
+        return "front/fragments/dynamic/dynamicElements/scores.html";
     }
 
     @GetMapping("/default")
