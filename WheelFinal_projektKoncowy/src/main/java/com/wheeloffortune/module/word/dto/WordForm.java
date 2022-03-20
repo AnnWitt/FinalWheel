@@ -22,7 +22,7 @@ public class WordForm {
     }
 
     public WordForm setUuid(String uuid) {
-        this.uuid = UUID.randomUUID().toString();
+        this.uuid = uuid;
         return this;
     }
 

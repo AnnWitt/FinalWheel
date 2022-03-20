@@ -1,5 +1,6 @@
 package com.wheeloffortune.module.game.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.wheeloffortune.core.enums.TurnEnum;
 import com.wheeloffortune.module.user.entity.UserEntity;
 import com.wheeloffortune.module.word.entity.WordEntity;
@@ -9,10 +10,11 @@ import java.util.Set;
 
 @Entity
 @Table(name = "game")
-public class WheelOfFortuneEntity {
+@JsonIgnoreProperties(value = {"players", "wordEntity"})
+public class WOTEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String uuid;
     private Integer playerOneScore;
@@ -21,14 +23,14 @@ public class WheelOfFortuneEntity {
     private TurnEnum turn;
     @ManyToMany
     private Set<UserEntity> players;
-    @OneToOne(mappedBy = "wheelOfFortune")
+    @OneToOne
     private WordEntity wordEntity;
 
     public Long getId() {
         return id;
     }
 
-    public WheelOfFortuneEntity setId(Long id) {
+    public WOTEntity setId(Long id) {
         this.id = id;
         return this;
     }
@@ -37,7 +39,7 @@ public class WheelOfFortuneEntity {
         return uuid;
     }
 
-    public WheelOfFortuneEntity setUuid(String uuid) {
+    public WOTEntity setUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
@@ -46,7 +48,7 @@ public class WheelOfFortuneEntity {
         return playerOneScore;
     }
 
-    public WheelOfFortuneEntity setPlayerOneScore(Integer playerOneScore) {
+    public WOTEntity setPlayerOneScore(Integer playerOneScore) {
         this.playerOneScore = playerOneScore;
         return this;
     }
@@ -55,7 +57,7 @@ public class WheelOfFortuneEntity {
         return playerTwoScore;
     }
 
-    public WheelOfFortuneEntity setPlayerTwoScore(Integer playerTwoScore) {
+    public WOTEntity setPlayerTwoScore(Integer playerTwoScore) {
         this.playerTwoScore = playerTwoScore;
         return this;
     }
@@ -64,7 +66,7 @@ public class WheelOfFortuneEntity {
         return currentWordState;
     }
 
-    public WheelOfFortuneEntity setCurrentWordState(String currentWordState) {
+    public WOTEntity setCurrentWordState(String currentWordState) {
         this.currentWordState = currentWordState;
         return this;
     }
@@ -73,7 +75,7 @@ public class WheelOfFortuneEntity {
         return turn;
     }
 
-    public WheelOfFortuneEntity setTurn(TurnEnum turn) {
+    public WOTEntity setTurn(TurnEnum turn) {
         this.turn = turn;
         return this;
     }
@@ -82,7 +84,7 @@ public class WheelOfFortuneEntity {
         return players;
     }
 
-    public WheelOfFortuneEntity setPlayers(Set<UserEntity> players) {
+    public WOTEntity setPlayers(Set<UserEntity> players) {
         this.players = players;
         return this;
     }
@@ -91,7 +93,7 @@ public class WheelOfFortuneEntity {
         return wordEntity;
     }
 
-    public WheelOfFortuneEntity setWordEntity(WordEntity wordEntity) {
+    public WOTEntity setWordEntity(WordEntity wordEntity) {
         this.wordEntity = wordEntity;
         return this;
     }

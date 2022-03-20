@@ -1,10 +1,9 @@
 package com.wheeloffortune.module.word.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
+import com.wheeloffortune.module.game.entity.WOTEntity;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 
 @Entity
@@ -21,7 +20,8 @@ public class WordEntity {
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
     @OneToOne
-    private WheelOfFortuneEntity wheelOfFortune;
+    @JoinColumn(name = "wordEntity")
+    private WOTEntity wheelOfFortune;
 
     public String getUuid() {
         return uuid;
@@ -59,11 +59,11 @@ public class WordEntity {
         return this;
     }
 
-    public WheelOfFortuneEntity getWheelOfFortune() {
+    public WOTEntity getWheelOfFortune() {
         return wheelOfFortune;
     }
 
-    public WordEntity setWheelOfFortune(WheelOfFortuneEntity wheelOfFortune) {
+    public WordEntity setWheelOfFortune(WOTEntity wheelOfFortune) {
         this.wheelOfFortune = wheelOfFortune;
         return this;
     }
