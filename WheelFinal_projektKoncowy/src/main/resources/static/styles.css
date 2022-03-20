@@ -85,9 +85,9 @@ body {
     font-family: ShlopShloppy-Regular;
     font-style: italic;
     font-weight: bolder;
+    justify-content: center;
     color: maroon;
 }
-
 
 /*https://cssgradient.io/*/
 .dynamic {
@@ -188,6 +188,7 @@ footer {
     background-color: #ffffff;
     font-family: ShlopShloppy-Regular;
     display: flex;
+    justify-content: center;
 }
 
 .fragPlayground {
