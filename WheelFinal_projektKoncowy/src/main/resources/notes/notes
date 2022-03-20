@@ -5,6 +5,8 @@ jquery78
 str 84 -> zachowac wyswietlanie wszystkich ale w zaleznosci od wybranego przycisku robimy
 show/hide. Składnia: $("#somediv").show()  ,  $("#somediv").hide()
 
+https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+
 string – ciąg znaków,
 • number – wartość numeryczna, w JS zarówno liczby całkowite jak i
 zmiennoprzecinkowe mają typ numer,

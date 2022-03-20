@@ -1,0 +1,29 @@
+
+.any1 {
+    background-color: #a4060d;
+    color: #dae5da;
+    display: none;
+    /*display: none; -> znika */
+}
+
+.any2 {
+    display: block;
+    background-color: #30a930;
+}
+
+.any3 {
+    background-color: #1234af;
+}
+
+.content1 {
+    background-color: #1234af;
+}
+
+.content2 {
+    background-color: #30a930;
+}
+
+
+.content3 {
+    background-color: #a4060d;
+}
