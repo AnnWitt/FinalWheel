@@ -7,21 +7,14 @@
 </head>
 <body>
 <header>
-    <div class="pictureFormat" th:replace="front/fragments/picture :: fragPicture"></div>
-    <div class="banner" th:replace="front/fragments/banner :: fragBanner"></div>
+    <div class="pictureFormat" th:replace="front/fragments/layout/picture :: fragPicture"></div>
+    <div class="banner" th:replace="front/fragments/layout/banner :: fragBanner"></div>
 </header>
-<nav th:replace="front/fragments/menu :: fragMenu">
+<nav th:replace="front/fragments/layout/menu :: fragMenu">
 </nav>
-
-<section class="dynamic">
 <!--nasza część dynamiczna-->
-<div class="default" th:fragment="default"> ...default... </div>
-<div class="fragGame" th:fragment="fragGame"> ...Game... </div>
-<div class="playerCL" th:fragment="playerCL"> ...player... </div>
-<div class="score" th:fragment="score"> ...score... </div>
-<div class="admin" th:fragment="admin"> ...coadmin... </div>
-</section>
+<section class="dynamic" th:replace="front/fragments/layout/dynamic"::dynamic> ...dynamic... </section>
 <!--koniec dynamicznej-->
-<footer th:replace="front/fragments/footer :: fragFooter"></footer>
+<footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
 </body>
 </html>
