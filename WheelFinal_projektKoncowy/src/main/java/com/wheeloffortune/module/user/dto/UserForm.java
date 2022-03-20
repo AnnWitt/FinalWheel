@@ -1,6 +1,6 @@
 package com.wheeloffortune.module.user.dto;
 
-import com.wheeloffortune.module.game.entity.WheelOfFortuneEntity;
+import com.wheeloffortune.module.game.entity.WOTEntity;
 
 import javax.validation.constraints.NotNull;
 import java.util.Set;
@@ -11,7 +11,7 @@ public class UserForm {
     private String uuid;
     @NotNull(message = "user requires a name")
     private String username;
-    private Set<WheelOfFortuneEntity> games;
+    private Set<WOTEntity> games;
 
     public UserForm() {}
 
@@ -20,7 +20,7 @@ public class UserForm {
     }
 
     public UserForm setUuid(String uuid) {
-        this.uuid = UUID.randomUUID().toString();
+        this.uuid = uuid;
         return this;
     }
 
@@ -33,11 +33,11 @@ public class UserForm {
         return this;
     }
 
-    public Set<WheelOfFortuneEntity> getGames() {
+    public Set<WOTEntity> getGames() {
         return games;
     }
 
-    public UserForm setGames(Set<WheelOfFortuneEntity> games) {
+    public UserForm setGames(Set<WOTEntity> games) {
         this.games = games;
         return this;
     }
