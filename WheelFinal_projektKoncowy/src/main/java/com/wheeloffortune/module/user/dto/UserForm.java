@@ -1,10 +1,8 @@
 package com.wheeloffortune.module.user.dto;
 
 import com.wheeloffortune.module.game.entity.WOTEntity;
-
 import javax.validation.constraints.NotNull;
 import java.util.Set;
-import java.util.UUID;
 
 public class UserForm {
 

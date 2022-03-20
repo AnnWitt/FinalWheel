@@ -1,9 +1,6 @@
 package com.wheeloffortune.module.game.dto;
 
 import com.wheeloffortune.core.enums.TurnEnum;
-import com.wheeloffortune.module.user.entity.UserEntity;
-import com.wheeloffortune.module.word.dto.WordDto;
-import com.wheeloffortune.module.word.entity.WordEntity;
 import java.util.Set;
 
 public class WOTDto {

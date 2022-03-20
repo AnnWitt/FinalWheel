@@ -3,21 +3,11 @@ package com.wheeloffortune.module.game.service;
 import com.wheeloffortune.module.game.dto.WOTDto;
 import com.wheeloffortune.module.game.dto.WOTForm;
 import com.wheeloffortune.module.game.entity.WOTEntity;
-import com.wheeloffortune.module.game.mapper.WOTMapper;
 import com.wheeloffortune.module.game.mapper.WOTSmartMapper;
 import com.wheeloffortune.module.game.repository.WOTRepository;
-import com.wheeloffortune.module.user.entity.UserEntity;
-import com.wheeloffortune.module.user.mapper.UserMapper;
-import com.wheeloffortune.module.user.reposytory.UserRepository;
-import com.wheeloffortune.module.word.entity.WordEntity;
-import com.wheeloffortune.module.word.mapper.WordMapper;
-import com.wheeloffortune.module.word.repository.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class WOTService {
