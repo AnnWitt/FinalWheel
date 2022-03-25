@@ -2,9 +2,7 @@ package com.wheeloffortune.module.word.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.wheeloffortune.module.game.entity.WOTEntity;
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "word")

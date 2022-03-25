@@ -1,11 +1,9 @@
 package com.wheeloffortune.module.word.service;
 
-
 import com.wheeloffortune.module.word.dto.WordDto;
 import com.wheeloffortune.module.word.dto.WordForm;
 import com.wheeloffortune.module.word.entity.CategoryEntity;
 import com.wheeloffortune.module.word.entity.WordEntity;
-import com.wheeloffortune.module.word.mapper.CategoryMapper;
 import com.wheeloffortune.module.word.mapper.WordMapper;
 import com.wheeloffortune.module.word.repository.CategoryRepository;
 import com.wheeloffortune.module.word.repository.WordRepository;

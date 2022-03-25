@@ -2,9 +2,7 @@ package com.wheeloffortune.module.word.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.validation.constraints.NotNull;
-import java.util.UUID;
 
 public class WordForm {
 

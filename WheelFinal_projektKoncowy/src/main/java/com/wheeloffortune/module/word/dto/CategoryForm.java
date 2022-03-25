@@ -1,7 +1,6 @@
 package com.wheeloffortune.module.word.dto;
 
 import com.wheeloffortune.module.word.entity.WordEntity;
-
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
