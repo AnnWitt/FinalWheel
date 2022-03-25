@@ -6,7 +6,7 @@ body {
 
 .buttonEmpty {
     /*    image-orientation: 0;*/
-    background-color: #b2d7b2; /*ma byc bialy*/
+    background-color: #560608; /*ma byc bialy*/
     border-color: #ffffff;
     border-style: solid;
     width: 30px;
@@ -20,8 +20,9 @@ body {
     font-size: +20px;
     /*   image-orientation: 0;*/
     color: #423e3e;
+    font-family: ShlopShloppy-Regular;
     background-color: #6c766f;
-    border-color: #ffffff;
+    border-color: #000000;
     border-style: solid;
     width: 30px;
     height: 30px;
@@ -34,9 +35,10 @@ body {
 .buttonActive {
     font-size: +20px;
     /*   image-orientation: 0;*/
-    color: #ffffff;
-    background-color: #a4060d;
-    border-color: #ffffff;
+    color: #000000;
+    font-family: ShlopShloppy-Regular;
+    background-color: #ffffff;
+    border-color: #000000;
     border-style: solid;
     width: 30px;
     height: 30px;
@@ -50,9 +52,10 @@ body {
     font-size: +20px;
     /*    image-orientation: 0;*/
     color: #070907;
-    background-color: #54bb98;
-    border-color: #dae5da;
+    background-color: #ffffff;
+    border-color: #ffffff;
     border-style: solid;
+    font-family: ShlopShloppy-Regular;
     width: 30px;
     height: 30px;
     font-weight: bold;
@@ -65,7 +68,7 @@ body {
     font-size: +20px;
     /*    image-orientation: 0;*/
     color: #ffffff;
-    background-color: #103f10;
+    background-color: #000000;
     border-color: #ffffff;
     border-style: solid;
     width: 30px;
@@ -146,7 +149,7 @@ body {
     display: flex;
     float: right;
     width: 100%;
-    background-color: chartreuse;
+    background-color: #59692b;
 }
 
 .admin {

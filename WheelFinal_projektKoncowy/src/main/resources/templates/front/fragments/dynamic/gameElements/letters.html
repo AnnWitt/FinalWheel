@@ -6,15 +6,23 @@
 </head>
 <body>
 
+<!--<input id="wclass" class="button-stop" type="button" onclick="changeclass();">-->
+
 <div class="lettersPanel" th:fragment="lettersPanel">
-        <p class="buttonEmpty"></p> <!--wypelniacz-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
-        <p class="buttonEmpty"></p> <!--wypelniacz-->
-        <p class="buttonActive">2</p> <!--Panel: litera do sprawdzenia-->
-        <p class="letterKnown">3</p> <!--Hasło: zgadnięta litera-->
-        <p class="letterUnknown">-</p> <!--Hasło: nieznana litera-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
-        <p class="buttonInactive">1</p> <!--Panel: litera już była sprawdzana-->
+        <script src="buttonActions.js" defer>
+        <button class="buttonEmpty"></button> <!--wypelniacz-->
+        <button class="buttonInactive">1</button> <!--Panel: litera już była sprawdzana-->
+        <button class="buttonEmpty"></button> <!--wypelniacz-->
+        <button class="buttonActive">2</button> <!--Panel: litera do sprawdzenia-->
+        <button class="letterKnown">3</button> <!--Hasło: zgadnięta litera-->
+        <button class="letterUnknown">-</button> <!--Hasło: nieznana litera-->
+        <button class="buttonInactive">1</button> <!--Panel: litera już była sprawdzana-->
+     /*   <button class="buttonActive" onclick="dupa(class)">?</button> <!--eksperyment-->*/
+        <button class="buttonActive" onclick=>?</button> <!--eksperyment-->
+        </script>
+
+ <!--       140,143, 163, 165, 175, 198, 202, 209, 211-->
+
         <section>
                 <script type="text/javascript">
                         for (i = 65; i < 91; i++) {

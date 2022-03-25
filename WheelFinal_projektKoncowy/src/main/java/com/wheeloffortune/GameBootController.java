@@ -42,5 +42,10 @@ public class GameBootController {
         return "front/fragments/layout/dynamic.html";
     }
 
+    @GetMapping("/test")
+    public String getTest() {
+        return "notes/test.html";
+    }
+
 
 }

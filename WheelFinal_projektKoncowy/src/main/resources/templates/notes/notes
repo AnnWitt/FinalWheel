@@ -1,0 +1,82 @@
+formularze - > buskiewicz str 27
+javascript 53
+jquery78
+
+str 84 -> zachowac wyswietlanie wszystkich ale w zaleznosci od wybranego przycisku robimy
+show/hide. Składnia: $("#somediv").show()  ,  $("#somediv").hide()
+
+https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+
+string – ciąg znaków,
+• number – wartość numeryczna, w JS zarówno liczby całkowite jak i
+zmiennoprzecinkowe mają typ numer,
+• boolean – wartość logiczna – prawda albo fałsz,
+• undefined – wartość niezadeklarowana, nieistniejąca w pamięci,
+• null – reprezentuje zamierzony brak wartości,
+• symbol – identyfikuje anonimowe właściwości obiektu, używany jako
+unikalny klucz.
+
+
+------------
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Logowanie</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id='background'>
+        <select id='user-select' onchange='login();'>
+            <option value=0 selected >pierwszy</option>
+            <option value=1>drugi</option>
+        </select>
+        <h3>użytkownik</h3>
+        <h4 id='user-name'></h4>
+        <p>wybierz kolor:</p>
+        <input id='color-input' type='color' value='#FFFFFF'>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
+
+function User(id, color, name) {
+    this.id = id;
+    this.color = color;
+    this.name = name;
+  }
+
+const firstUser = new User(0,'#FFFFFF', 'uzytkownik_1');
+const secondUser = new User(1,'#FFFFFF', 'uzytkownik_2');
+
+const users = [];
+
+users.push(firstUser);
+users.push(secondUser);
+
+const background = document.querySelector('#background');
+const userName = document.querySelector('#user-name');
+const colorInput = document.querySelector('#color-input');
+
+userName.innerHTML = users[0].name;
+colorInput.value = users[0].color;
+colorInput.onchange = function() { changeColor(0); };
+
+function login() {
+    let whichUser = parseInt(document.querySelector('#user-select').value);
+
+    userName.innerHTML = users[whichUser].name;
+    background.style.backgroundColor = users[whichUser].color;
+    colorInput.value = users[whichUser].color;
+    colorInput.onchange = function() { changeColor(whichUser); };
+}
+
+function changeColor(user) {
+    let i = user;
+    users[i].color = colorInput.value;
+    background.style.backgroundColor = colorInput.value;
+}
+
+ <!-- https://forum.pasja-informatyki.pl/15502/dynamiczna-zmiana-stylu
+        https://stackoverflow.com/questions/16191808/javascript-button-style-change-on-click-->
