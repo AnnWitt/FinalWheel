@@ -6,6 +6,7 @@ import com.wheeloffortune.module.word.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Component
@@ -21,8 +22,8 @@ public class Random {
         return categoryService.getAll().stream().findAny().get().getUuid();
     }
 
-    public Optional<WordDto> generateRNGWord(){
+    public WordDto generateRNGWord(){
         String categoryUuid = generateRNGCategory();
-        return wordService.getAll().stream().filter(word -> categoryService.getOne(categoryUuid).getName().equals(word.getCategoryName())).findAny();
+        return wordService.getAll().stream().filter((word) -> Objects.equals(word.getCategoryName(), categoryService.getOne(categoryUuid).getName())).findAny().get();
     }
 }

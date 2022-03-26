@@ -4,21 +4,16 @@ import com.wheeloffortune.core.enums.TurnEnum;
 import com.wheeloffortune.module.game.dto.WOTForm;
 import com.wheeloffortune.module.game.service.WOTService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-
-@Component
 public class GameMaster {
 
     @Autowired
-    private Random random;
+    private Random random ;
 
     @Autowired
     private WOTService GameService;
 
-    final String chosenWord = random.generateRNGWord().orElseThrow(() -> new RuntimeException("word has not been chosen")).getWord();
+    private String chosenWord = random.generateRNGWord().getWord();
     private Integer playerOneScore;
     private Integer playerTwoScore;
     private String currentWordState = chosenWord.replaceAll("[A-Za-z0-9]", "_");
