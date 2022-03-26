@@ -6,39 +6,27 @@
 </head>
 <body>
 
-<!--<input id="wclass" class="button-stop" type="button" onclick="changeclass();">-->
-
 <div class="lettersPanel" th:fragment="lettersPanel">
-        <script src="buttonActions.js" defer>
-        <button class="buttonEmpty"></button> <!--wypelniacz-->
-        <button class="buttonInactive">1</button> <!--Panel: litera już była sprawdzana-->
-        <button class="buttonEmpty"></button> <!--wypelniacz-->
-        <button class="buttonActive">2</button> <!--Panel: litera do sprawdzenia-->
-        <button class="letterKnown">3</button> <!--Hasło: zgadnięta litera-->
-        <button class="letterUnknown">-</button> <!--Hasło: nieznana litera-->
-        <button class="buttonInactive">1</button> <!--Panel: litera już była sprawdzana-->
-     /*   <button class="buttonActive" onclick="dupa(class)">?</button> <!--eksperyment-->*/
-        <button class="buttonActive" onclick=>?</button> <!--eksperyment-->
-        </script>
-
- <!--       140,143, 163, 165, 175, 198, 202, 209, 211-->
-
-        <section>
-                <script type="text/javascript">
-                        for (i = 65; i < 91; i++) {
-                                document.write(String.fromCharCode(i) + " ");
-                        }
-                                var litera;
-                                document.write("<br>")
-                                litera=String.fromCharCode(70)
-                                document.write("<br>")
-                                document.write(litera + " <-- wybrana litera")
-                </script>
-        </section>
+    <section>
+    <script type="text/javascript">
+        var alfabet = [];
+        alfabet.push("Ą", "Ć", "Ę", "Ł", "Ó", "Ś", "Ż", "Ź")
+        for (i = 65; i < 91; i++) {
+            alfabet.push(String.fromCharCode(i))
+        }
+        alfabet.sort();
+        for (i = 0; i < 34; i++) {
+            document.write("<button style=' font-size: +20px;color: #000000;font-family: ShlopShloppy-Regular;" +
+                "background-color: #ffffff;border-color: #000000;border-style: solid;width: 30px;height: 30px;font-weight: bold;" +
+                "display: inline-flex;justify-content: center;align-items: center;' onclick=this.style.display='none'>" + alfabet[i] + "</button>");
+        }
+        var litera;
+        litera = String.fromCharCode(70);
+    </script>
+    </section>
 </div>
 
 <p> Zaczyt </p>
-
 
 
 </body>
