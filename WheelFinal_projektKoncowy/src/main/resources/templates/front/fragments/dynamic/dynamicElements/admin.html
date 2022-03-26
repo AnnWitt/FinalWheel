@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" type=text/css href="styles.css">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type=text/css href="styles.css">
+    <title>Wheel of torture :) localhost </title>
 </head>
 <body>
-
-<div class="admin" th:fragment="admin">
-admin
-</div>
+<header>
+    <div class="pictureFormat" th:replace="front/fragments/layout/picture :: fragPicture"></div>
+    <div class="banner" th:replace="front/fragments/layout/banner :: fragBanner"></div>
+</header>
+<nav th:replace="front/fragments/layout/menu :: fragMenu">
+</nav>
+<div class="admin">Adminowe sprawki</div>
+<footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
 </body>
 </html>

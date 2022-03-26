@@ -4,6 +4,7 @@ body {
     border-style: solid;
 }
 
+/*Kafelki do odkrycia*/
 .buttonEmpty {
     /*    image-orientation: 0;*/
     background-color: #560608; /*ma byc bialy*/
@@ -14,9 +15,9 @@ body {
     font-size: +20px;
 }
 
-.letterKnown {
+/*.letterKnown {
     font-size: +20px;
-    /*    image-orientation: 0;*/
+    !*    image-orientation: 0;*!
     color: #070907;
     background-color: #ffffff;
     border-color: #ffffff;
@@ -28,8 +29,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
 
+/*
 .letterUnknown {
     font-size: +20px;
     color: #ffffff;
@@ -43,8 +45,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+*/
 
-.menu {
+.menuElements {
     display: flex;
     background-color: #ffffff;
     border-style: solid;
@@ -56,6 +59,18 @@ body {
     justify-content: center;
     color: maroon;
 }
+
+.menu{
+    display: flex;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #000000;
+    font-style: italic;
+    font-weight: bolder;
+    justify-content: center;
+    height: 200px;
+}
+
 
 /*https://cssgradient.io/*/
 .dynamic {
@@ -109,21 +124,30 @@ body {
 
 .lettersPanel {
     display: flex;
-   /* float: right;*/
     width: 100%;
-    justify-content: center;
-    align-content: center;
+    justify-content: left;
     background-color:#560608;
-    padding: 20px;
-    /*background-color: black;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 .admin {
     background-color: coral;
+    color: #1234af;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    display: flex;
 }
 
 .score {
     background-color: indigo;
+    color: #1234af;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    display: flex;
 }
 
 header {
@@ -140,6 +164,34 @@ nav {
 
 .playerCL {
     background-color: #a4060d;
+    border-style: solid;
+    border-color: black;
+    margin: 0px;
+    text-align: center;
+}
+
+.newPlayer{
+    background-color: #1234af;
+    padding: 10px;
+    width: 40.5%;
+    margin-left: 3px;
+    text-align: center;
+    justify-content: center;
+    /*align-content: center;*/
+    float: left;
+  /*  display: flex;*/
+}
+.existingPlayer{
+    background-color: #30a930;
+    padding: 10px;
+    width: 40.5%;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0px;
+   /* display: flex;*/
+    float: right;
+/*    align-content: center;*/
+
 }
 
 footer {
@@ -157,7 +209,7 @@ footer {
 }
 
 .fragPlayground {
-    background-color:#000000;
+    background-color: #30a930;
 /*    background-color:#560608;*/
 }
 
@@ -166,13 +218,13 @@ a {
     color: maroon;
 }
 
-.hide {
+/*.hide {
     display: none;
 }
 
 .show {
     display: block;
-}
+}*/
 
 .default {
     background-color: #000000;

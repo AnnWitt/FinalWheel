@@ -1,21 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<script type="text/javascript" async="" src="https://script.4dex.io/localstore.js">
-
-</script>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type=text/css href="styles.css">
+    <title>Wheel of torture :) localhost </title>
 </head>
-
-
 <body>
-<section class="dynamic" th:fragment="dynamic">
-    <div class="default" th:fragment="default"> ...default... </div>
-    <div class="fragGame hide" th:fragment="fragGame"> ...Game... </div>
-    <div class="playerCL hide" th:fragment="playerCL"> ...player... </div>
-    <div class="score hide" th:fragment="score"> ...score... </div>
-    <div class="admin hide" th:fragment="admin"> ...coadmin... </div>
-</section>
+<header>
+    <div class="pictureFormat" th:replace="front/fragments/layout/picture :: fragPicture"></div>
+    <div class="banner" th:replace="front/fragments/layout/banner :: fragBanner"></div>
+</header>
+<nav th:replace="front/fragments/layout/menu :: fragMenu">
+</nav>
+<div class="dynamic" th:fragment=dynamic>
+    <div class="lettersPanel" th:replace="front/fragments/dynamic/gameElements/letters :: lettersPanel"></div>
+    <div class="fragPlayground" th:replace="front/fragments/dynamic/gameElements/playground :: fragPlayground"></div>
+</div>
+<p style="color: aliceblue">alphabet z htmla</p>
+<footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
 </body>
+
 </html>

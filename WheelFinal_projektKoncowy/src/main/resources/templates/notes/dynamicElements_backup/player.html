@@ -1,39 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type=text/css href="styles.css">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type=text/css href="styles.css">
-    <title>Wheel of torture :) localhost </title>
 </head>
 <body>
-<header>
-    <div class="pictureFormat" th:replace="front/fragments/layout/picture :: fragPicture"></div>
-    <div class="banner" th:replace="front/fragments/layout/banner :: fragBanner"></div>
-</header>
-<nav th:replace="front/fragments/layout/menu :: fragMenu">
-</nav>
-
-<!--<div class="playerCL" th:fragment="fragPlayer"> Tu będzie o graczach </div>-->
-
-
-<div class="playerCL">
-    <label for="new">
-        <div class="newPlayer">New player<input type="radio" name="player" id="new">
-        <p>Tu będzie formularz do dodania gracza</p></div>
-</label>
-
-    <label for="existing">
-        <div class="existingPlayer">Existing player<input type="radio" name="player" id="existing">
-        <p>Tu będzie lista graczy do wyboru</p></div>
-</label>
-
-</div>
-
-
-<footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
+<div class="playerCL" th:fragment="fragPlayer"> Tu będzie o graczach </div>
+<form action="IndexWheel.html">
+    <button type="submit" style="height: 30px;width: 70px;color: #69070b"/>Powrót
+</form>
 </body>
 </html>
-
 <!--
 
 <form action="" method="post" id="contactForm">

@@ -12,6 +12,11 @@ public class GameBootController {
         return "front/IndexWheel.html";
     }
 
+    @GetMapping("/IndexWheel.html")
+    public String getHomeTemp() {
+        return "front/IndexWheel.html";
+    }
+
     @GetMapping("/game")
     public String getGame() {
         return "front/fragments/dynamic/dynamicElements/game.html";

@@ -13,7 +13,8 @@
 <nav th:replace="front/fragments/layout/menu :: fragMenu">
 </nav>
 <!--nasza część dynamiczna-->
-<section class="dynamic" th:replace="front/fragments/layout/dynamic"::dynamic> ...dynamic... </section>
+<section class="default" th:replace="front/fragments/dynamic/dynamicElements/default"::default></section>
+<!--<section class="dynamic" th:replace="front/fragments/layout/dynamic"::dynamic></section>-->
 <!--koniec dynamicznej-->
 <footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
 </body>
