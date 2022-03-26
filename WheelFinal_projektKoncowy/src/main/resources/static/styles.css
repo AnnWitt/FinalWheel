@@ -12,40 +12,6 @@ body {
     width: 30px;
     height: 30px;
     font-size: +20px;
-
-
-}
-
-.buttonInactive {
-    font-size: +20px;
-    /*   image-orientation: 0;*/
-    color: #423e3e;
-    font-family: ShlopShloppy-Regular;
-    background-color: #6c766f;
-    border-color: #000000;
-    border-style: solid;
-    width: 30px;
-    height: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonActive {
-    font-size: +20px;
-    /*   image-orientation: 0;*/
-    color: #000000;
-    font-family: ShlopShloppy-Regular;
-    background-color: #ffffff;
-    border-color: #000000;
-    border-style: solid;
-    width: 30px;
-    height: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .letterKnown {
@@ -66,7 +32,6 @@ body {
 
 .letterUnknown {
     font-size: +20px;
-    /*    image-orientation: 0;*/
     color: #ffffff;
     background-color: #000000;
     border-color: #ffffff;
@@ -147,9 +112,13 @@ body {
 
 .lettersPanel {
     display: flex;
-    float: right;
+   /* float: right;*/
     width: 100%;
-    background-color: #59692b;
+    justify-content: center;
+    align-content: center;
+    background-color:#560608;
+    padding: 20px;
+    /*background-color: black;*/
 }
 
 .admin {
@@ -195,7 +164,8 @@ footer {
 }
 
 .fragPlayground {
-    background-color: #103f10;
+    background-color:#000000;
+/*    background-color:#560608;*/
 }
 
 a {
