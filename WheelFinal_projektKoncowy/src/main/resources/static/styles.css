@@ -74,9 +74,7 @@ body {
     border-style: solid;
     text-align: center;
     vertical-align: middle;
-    border-color: #000000;
     background-color: #ffffff;
-    border-style: solid;
 }
 
 .banner {
@@ -99,7 +97,6 @@ body {
     font-family: ShlopShloppy-Regular;
     color: maroon;
 }
-
 
 @import url(//db.onlinewebfonts.com/c/bb45f7c1aa890db9f527bc3790fc8c52?family=ShlopShloppy-Regular);
 /*https://www.onlinewebfonts.com/download/bb45f7c1aa890db9f527bc3790fc8c52*/
@@ -127,10 +124,6 @@ body {
 
 .score {
     background-color: indigo;
-}
-
-.default {
-    background-color: maroon;
 }
 
 header {
@@ -173,6 +166,39 @@ a {
     color: maroon;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.default {
+    background-color: #000000;
+    text-align: center;
+}
+
+.defaultChoice {
+    display: flex;
+    margin: auto;
+    background-color: #ffffff;
+    border-style: solid;
+    padding: 10px;
+    border-color: #000000;
+    font-family: ShlopShloppy-Regular, serif;
+    font-style: italic;
+    font-weight: bolder;
+    justify-content: center;
+    color: maroon;
+    text-align: center;
+    width: 480px;
+}
+
+.defaultBorder{
+    border-style: solid;
+    border-color: #000000;
+}
 
 /*
 :link hiperłącze nieodwiedzone (ang. unvisited link),

@@ -7,13 +7,15 @@
 <head>
     <meta charset="UTF-8">
 </head>
+
+
 <body>
 <section class="dynamic" th:fragment="dynamic">
     <div class="default" th:fragment="default"> ...default... </div>
-    <div class="fragGame" th:fragment="fragGame"> ...Game... </div>
-    <div class="playerCL" th:fragment="playerCL"> ...player... </div>
-    <div class="score" th:fragment="score"> ...score... </div>
-    <div class="admin" th:fragment="admin"> ...coadmin... </div>
+    <div class="fragGame hide" th:fragment="fragGame"> ...Game... </div>
+    <div class="playerCL hide" th:fragment="playerCL"> ...player... </div>
+    <div class="score hide" th:fragment="score"> ...score... </div>
+    <div class="admin hide" th:fragment="admin"> ...coadmin... </div>
 </section>
 </body>
 </html>
