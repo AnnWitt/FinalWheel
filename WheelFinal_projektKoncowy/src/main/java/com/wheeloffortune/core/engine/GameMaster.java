@@ -21,16 +21,8 @@ public class GameMaster {
     final String chosenWord = random.generateRNGWord().orElseThrow(() -> new RuntimeException("word has not been chosen")).getWord();
     private Integer playerOneScore;
     private Integer playerTwoScore;
-    private String currentWordState = prepareCurrentWordState();
+    private String currentWordState = chosenWord.replaceAll("[A-Za-z0-9]", "_");
     private final static int pointValue = 10;
-
-    private String prepareCurrentWordState() {
-        for(int i = chosenWord.length(); i >= 0 ; i--){
-            currentWordState = new StringBuilder(currentWordState).append("_").toString();
-        }
-        return currentWordState;
-    }
-
     private TurnEnum turn;
 
     public boolean startGame(String letter, String gameUuid){
@@ -61,13 +53,13 @@ public class GameMaster {
     }
 
     private void fillOutCurrentWordState(String letter) {
-        List<Integer> indexes = new ArrayList<>();
-        for(int i = 0; i < chosenWord.length(); i++){
+        char[] chars = currentWordState.toCharArray();
+        for (int i = 0; i < chosenWord.length(); i++) {
             if(chosenWord.charAt(i) == letter.charAt(0)){
-                indexes.add(i);
+                chars[i] = letter.charAt(0);
             }
         }
-        indexes.forEach((index) -> currentWordState = currentWordState.replace(currentWordState.charAt(index), letter.charAt(0)));
+        currentWordState = String.valueOf(chars);
     }
 
     private void changeScore() {
