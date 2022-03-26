@@ -11,7 +11,7 @@ public class Confirm {
         return word.toLowerCase().split("");
     }
 
-    public static boolean letterIsLetterInWord(String letter, String word) throws NoWordException, NoLetterException {
+    public static boolean letterIsLetterInWord(String letter, String word) {
         /*if(word.isBlank() || word.isEmpty()){
             throw new NoWordException("word is empty/blank");
         }
