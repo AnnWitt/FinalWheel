@@ -59,7 +59,11 @@ public class GameBootController {
     }
 
     @GetMapping("/dynamic")
-    public String getDynamic() {
+    public String getDynamic(Model model) {
+        List<String> alphabet = new ArrayList<>();
+        alphabet.addAll(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
+                "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
+        model.addAttribute("letter",alphabet);
         return "front/fragments/layout/dynamic.html";
     }
 
@@ -71,9 +75,6 @@ public class GameBootController {
     @GetMapping("/panel")
     public String preparePanel(Model model){
         List<String> alphabet = new ArrayList<>(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
-                "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
-        model.addAttribute("letter",alphabet);
-
         return "front/fragments/dynamic/gameElements/letters.html";
     }
 
@@ -82,12 +83,5 @@ public class GameBootController {
         UserDto newUser = userService.create(form);
         return "redirect:/player";
     }
-
-
-/*    {
-        List<String> alphabet = new ArrayList<>();
-        alphabet.addAll(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
-                "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
-    }*/
 
 }

@@ -13,11 +13,12 @@ body {
     font-size: +20px;
 }
 
-/*.letterKnown {
+.letterKnown {
     font-size: +20px;
-    !*    image-orientation: 0;*!
+    /*    image-orientation: 0;*/
     color: #070907;
-    background-color: #ffffff;
+    background-color: #30a930;
+    /*background-color: #ffffff;*/
     border-color: #ffffff;
     border-style: solid;
     font-family: ShlopShloppy-Regular;
@@ -27,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
+}
 
 /*
 .letterUnknown {
