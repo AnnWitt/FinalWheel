@@ -97,7 +97,7 @@ public class WOTService {
     public WOTDto init() {
         userService.create(new UserForm().setUsername("Player1").setGames(new HashSet<>()));
         userService.create(new UserForm().setUsername("Player2").setGames(new HashSet<>()));
-        WordDto chosenWord = random.generateRNGWord().get();
+        WordDto chosenWord = random.generateRNGWord();
         return create(new WOTForm()
                 .setPlayerOneScore(0)
                 .setPlayerTwoScore(0)
