@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 
 @Controller
@@ -58,6 +59,21 @@ public class GameBootController {
         alphabet.addAll(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
                 "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
         model.addAttribute("letter",alphabet);
+
+        String word="test";
+        char emptyButtons='-';
+/*        wordbuttons hasło - znane*/
+        List<Character> wordButtons = new ArrayList<>();
+/*        List<Character> borderButtons = new ArrayList<>();*/
+        wordButtons.add(emptyButtons);
+        for (char ch : word.toUpperCase(Locale.ROOT).toCharArray()) {
+            wordButtons.add(ch);
+            /*emptyButtons.add('x');*/
+        }
+        wordButtons.add(emptyButtons);
+      /*  model.addAttribute("empty",borderButtons);*/
+        model.addAttribute("wordknown",wordButtons);
+
         return "front/fragments/layout/dynamic.html";
     }
 
