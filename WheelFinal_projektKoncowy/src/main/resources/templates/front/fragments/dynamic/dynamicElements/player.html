@@ -17,17 +17,26 @@
 
 
 <div class="playerCL">
-    <label for="new">
-        <div class="newPlayer">New player<input type="radio" name="player" id="new">
-        <p>Tu będzie formularz do dodania gracza</p></div>
-</label>
-
-    <label for="existing">
-        <div class="existingPlayer">Existing player<input type="radio" name="player" id="existing">
-        <p>Tu będzie lista graczy do wyboru</p></div>
-</label>
-
+    <div class="defaultBlock">
+        <h3>Create New User</h3>
+        <form th:action="@{/game/user}" th:object="${userForm}" method="POST">
+            <div>
+                <label for="username">Username</label>
+                <input id="username" type="text" th:field="*{username}">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="defaultBlock" style="float: right">
+        <span th:each="user : ${users}">
+            <label>Username:</label>
+            <p th:text="${user.username}"></p>
+            <label>Games: </label>
+            <p th:text="${user.games}"></p>
+        </span>
+    </div>
 </div>
+
 
 
 <footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>

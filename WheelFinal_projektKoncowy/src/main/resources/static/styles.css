@@ -4,10 +4,8 @@ body {
     border-style: solid;
 }
 
-/*Kafelki do odkrycia*/
 .buttonEmpty {
-    /*    image-orientation: 0;*/
-    background-color: #560608; /*ma byc bialy*/
+    background-color: #560608;
     border-color: #ffffff;
     border-style: solid;
     width: 30px;
@@ -175,25 +173,20 @@ nav {
 .newPlayer{
     background-color: #1234af;
     padding: 10px;
-    width: 40.5%;
+    width: 41.2%;
     margin-left: 3px;
     text-align: center;
     justify-content: center;
-    /*align-content: center;*/
     float: left;
-  /*  display: flex;*/
 }
 .existingPlayer{
     background-color: #30a930;
     padding: 10px;
-    width: 40.5%;
+    width: 41.2%;
     justify-content: center;
     text-align: center;
     margin-right: 0px;
-   /* display: flex;*/
     float: right;
-/*    align-content: center;*/
-
 }
 
 footer {
@@ -212,21 +205,12 @@ footer {
 
 .fragPlayground {
     background-color: #30a930;
-/*    background-color:#560608;*/
 }
 
 a {
     text-decoration: none;
     color: maroon;
 }
-
-/*.hide {
-    display: none;
-}
-
-.show {
-    display: block;
-}*/
 
 .default {
     background-color: #000000;
@@ -252,6 +236,21 @@ a {
 .defaultBorder{
     border-style: solid;
     border-color: #000000;
+}
+
+.defaultBlock{
+    width: 41%;
+    height: 222px;
+    float: left;
+    background-color: #ffffff;
+    border-style: solid;
+    padding: 10px;
+    border-color: #000000;
+    font-family: ShlopShloppy-Regular;
+    font-style: italic;
+    font-weight: bolder;
+    justify-content: center;
+    color: maroon;
 }
 
 /*
