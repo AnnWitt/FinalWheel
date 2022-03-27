@@ -53,4 +53,10 @@ public class CategoryService {
                 repository.findOneByUuid(uuid)
         );
     }
+
+    public CategoryDto getRandomCategory(){
+        return CategoryMapper.map(
+                repository.findRandomCategory()
+        );
+    }
 }
