@@ -8,6 +8,7 @@ import com.wheeloffortune.module.user.mapper.UserMapper;
 import com.wheeloffortune.module.word.entity.WordEntity;
 import com.wheeloffortune.module.word.mapper.WordMapper;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -16,6 +17,9 @@ import java.util.stream.Collectors;
 public class WOTMapper {
 
     public static Set<String> map(Set<WOTEntity> games){
+        if(null == games){
+            return new HashSet<>();
+        }
         return games.stream().map(WOTEntity::getUuid).collect(Collectors.toSet());
     }
 
