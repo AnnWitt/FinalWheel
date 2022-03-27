@@ -66,7 +66,7 @@ public class GameBootController {
         List<String> alphabet2 = new ArrayList<>();
         alphabet2.addAll(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
                 "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
-        model.addAttribute("letter",alphabet);
+        model.addAttribute("letter",alphabet2);
 
         return "front/fragments/dynamic/gameElements/letters.html";
     }
