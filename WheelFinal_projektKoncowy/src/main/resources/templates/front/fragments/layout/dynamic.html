@@ -25,7 +25,17 @@
         </tr><!--       Panel z literami do wyboru-->
         <tr>
             <div style="background-color: #1234af;text-align: center;padding-top: 10px;padding-bottom: 10px">
+                <button th:each="e:${empty}" th:text="${e}"</button>
+            </div>
+        </tr>
+        <tr>
+            <div style="background-color: #1234af;text-align: center;padding-top: 10px;padding-bottom: 10px">
                 <button th:each="wn:${wordknown}" th:text="${wn}"</button>
+            </div>
+        </tr>
+        <tr>
+            <div style="background-color: #1234af;text-align: center;padding-top: 10px;padding-bottom: 10px">
+                <button th:each="e:${empty}" th:text="${e}"</button>
             </div>
         </tr>
     </table>

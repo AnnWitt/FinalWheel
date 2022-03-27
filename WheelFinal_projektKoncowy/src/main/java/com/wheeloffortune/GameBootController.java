@@ -61,17 +61,19 @@ public class GameBootController {
         model.addAttribute("letter",alphabet);
 
         String word="test";
-        char emptyButtons='-';
+        char emptyButtons='x';
 /*        wordbuttons hasło - znane*/
         List<Character> wordButtons = new ArrayList<>();
-/*        List<Character> borderButtons = new ArrayList<>();*/
+        List<Character> borderButtons = new ArrayList<>();
+        borderButtons.add(emptyButtons);
         wordButtons.add(emptyButtons);
         for (char ch : word.toUpperCase(Locale.ROOT).toCharArray()) {
             wordButtons.add(ch);
-            /*emptyButtons.add('x');*/
+            borderButtons.add('x');
         }
         wordButtons.add(emptyButtons);
-      /*  model.addAttribute("empty",borderButtons);*/
+        borderButtons.add(emptyButtons);
+        model.addAttribute("empty",borderButtons);
         model.addAttribute("wordknown",wordButtons);
 
         return "front/fragments/layout/dynamic.html";
