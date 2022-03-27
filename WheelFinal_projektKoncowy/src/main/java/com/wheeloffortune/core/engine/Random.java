@@ -6,8 +6,10 @@ import com.wheeloffortune.module.word.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class Random {
@@ -19,11 +21,10 @@ public class Random {
     private CategoryService categoryService;
 
     public String generateRNGCategory(){
-        return categoryService.getAll().stream().findAny().get().getUuid();
+        return categoryService.getRandomCategory().getUuid();
     }
 
     public WordDto generateRNGWord(){
-        String categoryUuid = generateRNGCategory();
-        return wordService.getAll().stream().filter((word) -> Objects.equals(word.getCategoryName(), categoryService.getOne(categoryUuid).getName())).findAny().get();
+        return wordService.findRandomWord();
     }
 }

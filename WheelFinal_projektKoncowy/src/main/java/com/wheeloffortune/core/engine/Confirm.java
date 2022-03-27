@@ -7,11 +7,11 @@ import java.util.Arrays;
 
 public class Confirm {
 
-    private static String[] prepareWord(String word){
-        return word.toLowerCase().split("");
+    private static String prepareWord(String word){
+        return word.toUpperCase();
     }
 
     public static boolean letterIsLetterInWord(String letter, String word) {
-        return Arrays.asList(prepareWord(word)).contains(letter.toLowerCase());
+        return prepareWord(word).contains(letter.toUpperCase());
     }
 }
