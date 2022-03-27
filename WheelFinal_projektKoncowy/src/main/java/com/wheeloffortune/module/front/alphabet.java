@@ -1,3 +1,4 @@
+/*
 package com.wheeloffortune.module.front;
 
 import java.util.ArrayList;
@@ -11,3 +12,4 @@ public class alphabet {
                 "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
     }
 }
+*/

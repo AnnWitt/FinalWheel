@@ -125,10 +125,11 @@ body {
 .lettersPanel {
     display: flex;
     width: 100%;
-    justify-content: left;
+    justify-content: center;
     background-color:#560608;
     padding-top: 10px;
     padding-bottom: 10px;
+
 
 }
 
