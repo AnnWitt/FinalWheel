@@ -60,7 +60,7 @@ public class GameBootController {
                 "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
         model.addAttribute("letter",alphabet);
 
-        String word="test";
+        String word="tedstwe";
         char emptyButtons='x';
 /*        wordbuttons hasło - znane*/
         List<Character> wordButtons = new ArrayList<>();
