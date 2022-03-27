@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,11 +28,6 @@ public class GameBootController {
     @GetMapping("/IndexWheel.html")
     public String getHomeTemp() {
         return "front/IndexWheel.html";
-    }
-
-    @GetMapping("/game")
-    public String getGame() {
-        return "front/fragments/dynamic/dynamicElements/game.html";
     }
 
     @GetMapping("/player")
@@ -65,17 +59,6 @@ public class GameBootController {
                 "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "Q", "P", "R", "S", "Ś", "T", "U", "W", "X", "Y", "Z", "Ż", "Ź"));
         model.addAttribute("letter",alphabet);
         return "front/fragments/layout/dynamic.html";
-    }
-
-    @GetMapping("/test")
-    public String getTest() {
-        return "notes/test.html";
-    }
-
-    @GetMapping("/panel")
-    public String preparePanel(Model model){
-        List<String> alphabet = new ArrayList<>(Arrays.asList("A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I",
-        return "front/fragments/dynamic/gameElements/letters.html";
     }
 
     @PostMapping(path ="/game/user")
