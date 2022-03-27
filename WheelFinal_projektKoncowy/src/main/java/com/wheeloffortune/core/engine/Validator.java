@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Validator {
-    static boolean validate(String letter) {
+    public static boolean validate(String letter) {
         Pattern pattern = Pattern.compile("[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ@]");
         if(letter == null){
             return false;

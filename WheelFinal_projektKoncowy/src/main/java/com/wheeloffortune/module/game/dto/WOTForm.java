@@ -12,7 +12,7 @@ public class WOTForm {
     private Integer playerTwoScore;
     private String currentWordState;
     private TurnEnum turn;
-    @NotNull(message = "game requires players")
+    //@NotNull(message = "game requires players")
     private Set<String> playersUuid;
     @NotNull(message = "game requires a word to guess")
     private String wordUuid;
