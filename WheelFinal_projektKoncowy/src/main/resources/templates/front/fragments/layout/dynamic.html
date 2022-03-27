@@ -13,21 +13,21 @@
 <nav th:replace="front/fragments/layout/menu :: fragMenu">
 </nav>
 <div class="dynamic" th:fragment=dynamic>
-    <table class="lettersPanel">
+    <table>
         <tr>
-<!--            <button style="background-color: #1234af;color: #30a930" th:each="l:${letter}" th:text="${l}"></button>-->
-            <button style="background-color: #ffffff;color: #000000;font-size: 20px;border-color: #000000;border-style: solid;width: 30px;height: 30px;font-weight: bold;display: inline-flex;justify-content: center;align-items: center;"onclick=(style.display='none'); th:each="l:${letter}" th:text="${l}"></button>
-<!--
-
-            border-style: solid;width: 30px;height: 30px;font-weight: bold;display: inline-flex;justify-content: center;align-items: center;' onclick=(clicked(this));-->
+            <div style="background-color: white;text-align: center;padding-top: 10px;padding-bottom: 10px">
+                <button style="background-color: #ffffff;padding-top: 10px;padding-bottom: 10px;
+            color: #000000;font-size: 20px;border-color: #540404;border-style: solid;width: 30px;
+            height: 30px;font-weight: bold;display: inline-flex;justify-content: center;
+            align-items: center;" onclick=(style.display='none'); th:each="l:${letter}" th:text="${l}"></button>
+            </div>
         </tr>
     </table>
 
     <div class="fragPlayground" th:replace="front/fragments/dynamic/gameElements/playground :: fragPlayground"></div>
 </div>
 
-    <p style="color: aliceblue">alphabet z htmla</p>
-    <footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
+<footer th:replace="front/fragments/layout/footer :: fragFooter"></footer>
 </body>
 
 </html>
