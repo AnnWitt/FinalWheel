@@ -39,7 +39,7 @@ public class WOTRestController {
         return service.init().getUuid();
     }
     @PutMapping("/api/game/{uuid}/{letter}")
-    public String run(@PathVariable String uuid, @PathVariable String letter){
+    public boolean run(@PathVariable String uuid, @PathVariable String letter){
         return service.run(uuid,letter);
     }
 

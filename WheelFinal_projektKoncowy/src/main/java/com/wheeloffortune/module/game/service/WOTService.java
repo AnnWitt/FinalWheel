@@ -108,7 +108,7 @@ public class WOTService {
         );
     }
 
-    public String run(String uuid, String letter) {
+    public boolean run(String uuid, String letter) {
         WOTDto game = getOne(uuid);
         if(Validator.validate(letter)) {
             if(Confirm.letterIsLetterInWord(letter, wordService.getOne(game.getWordUuid()).getWord())){
@@ -129,11 +129,11 @@ public class WOTService {
                 form.setCurrentWordState(fillOutCurrentWordState(letter, game));
                 form.setWordUuid(game.getWordUuid());
                 update(uuid,form);
-                return game.getWordUuid();
+                return true;
             }
-            return game.getWordUuid();
+            return false;
         }
-        return game.getWordUuid();
+        return false;
     }
 
     private String fillOutCurrentWordState(String letter,  WOTDto game) {
