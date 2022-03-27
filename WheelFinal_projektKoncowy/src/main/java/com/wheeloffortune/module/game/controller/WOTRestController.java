@@ -34,4 +34,13 @@ public class WOTRestController {
     public void delete(@PathVariable String uuid){
         service.delete(uuid);
     }
+    @GetMapping("/api/game/init")
+    public String init(){
+        return service.init().getUuid();
+    }
+    @PutMapping("/api/game/{uuid}/{letter}")
+    public boolean run(@PathVariable String uuid, @PathVariable String letter){
+        return service.run(uuid,letter);
+    }
+
 }

@@ -28,6 +28,12 @@ public class UserService {
         );
     }
 
+    public UserDto getOneByUsername(String username){
+        return UserMapper.map(
+                repository.findOneByUsername(username)
+        );
+    }
+
     public UserDto create(UserForm form){
         UserEntity user = UserMapper.map(form);
         return UserMapper.map(

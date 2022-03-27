@@ -12,12 +12,6 @@ public class Confirm {
     }
 
     public static boolean letterIsLetterInWord(String letter, String word) {
-        /*if(word.isBlank() || word.isEmpty()){
-            throw new NoWordException("word is empty/blank");
-        }
-        if(letter.isBlank() || letter.isEmpty()){
-            throw new NoLetterException("letter is empty/blank");
-        }*/
         return Arrays.asList(prepareWord(word)).contains(letter.toLowerCase());
     }
 }
