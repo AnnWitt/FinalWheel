@@ -56,4 +56,10 @@ public class WordService {
                 repository.findOneByUuid(uuid)
         );
     }
+
+    public WordDto findRandomWord(){
+        return WordMapper.map(
+                repository.findRandomWord()
+        );
+    }
 }

@@ -94,22 +94,25 @@ public class WOTService {
         );
     }
 
-    public WOTDto init() {
-        userService.create(new UserForm().setUsername("Player1").setGames(new HashSet<>()));
-        userService.create(new UserForm().setUsername("Player2").setGames(new HashSet<>()));
+    public WOTDto init(List<String> users) {
+        /*userService.create(new UserForm().setUsername("Player1").setGames(new HashSet<>()));
+        userService.create(new UserForm().setUsername("Player2").setGames(new HashSet<>()));*/
         WordDto chosenWord = random.generateRNGWord();
         return create(new WOTForm()
                 .setPlayerOneScore(0)
                 .setPlayerTwoScore(0)
-                .setCurrentWordState(chosenWord.getWord().replaceAll("[A-Za-z0-9]", "_"))
+                .setCurrentWordState(chosenWord.getWord().replaceAll("[A-Za-z0-9żźćńółęąśŻŹĆĄŚĘŁÓŃ@]", "_"))
                 .setTurn(TurnEnum.PLAYER1)
-                .setPlayersUuid(userService.getAll().stream().map(UserDto::getUuid).collect(Collectors.toSet()))
+                .setPlayersUuid(new HashSet<>(users))
                 .setWordUuid(chosenWord.getUuid())
         );
     }
 
-    public boolean run(String uuid, String letter) {
+    public String run(String uuid, String letter) {
         WOTDto game = getOne(uuid);
+        if(game.getCurrentWordState().equals(wordService.getOne(game.getWordUuid()).getWord())){
+            return "Game Over, Player: " + game.getTurn().name() + " Won, Score: Player 1 - " + game.getPlayerOneScore() + " Player 2 - " + game.getPlayerTwoScore();
+        }
         if(Validator.validate(letter)) {
             if(Confirm.letterIsLetterInWord(letter, wordService.getOne(game.getWordUuid()).getWord())){
                 WOTForm form = new WOTForm();
@@ -129,17 +132,18 @@ public class WOTService {
                 form.setCurrentWordState(fillOutCurrentWordState(letter, game));
                 form.setWordUuid(game.getWordUuid());
                 update(uuid,form);
-                return true;
+                return "Correct";
             }
-            return false;
+            return "Letter Dose Not Exist";
         }
-        return false;
+        return "Incorrect Input";
     }
 
     private String fillOutCurrentWordState(String letter,  WOTDto game) {
         char[] chars = game.getCurrentWordState().toCharArray();
+        String word = wordService.getOne(game.getWordUuid()).getWord();
         for (int i = 0; i < wordService.getOne(game.getWordUuid()).getWord().length(); i++) {
-            if(wordService.getOne(game.getWordUuid()).getWord().charAt(i) == letter.charAt(0)){
+            if(String.valueOf(word.charAt(i)).equalsIgnoreCase(letter)){
                 chars[i] = letter.charAt(0);
             }
         }

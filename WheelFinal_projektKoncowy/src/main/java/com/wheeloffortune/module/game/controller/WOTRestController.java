@@ -3,11 +3,13 @@ package com.wheeloffortune.module.game.controller;
 import com.wheeloffortune.module.game.dto.WOTDto;
 import com.wheeloffortune.module.game.dto.WOTForm;
 import com.wheeloffortune.module.game.service.WOTService;
+import org.hibernate.mapping.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 public class WOTRestController {
@@ -34,12 +36,12 @@ public class WOTRestController {
     public void delete(@PathVariable String uuid){
         service.delete(uuid);
     }
-    @GetMapping("/api/game/init")
-    public String init(){
-        return service.init().getUuid();
+    @GetMapping("/api/game/init/{uuid1},{uuid2}")
+    public String init(@PathVariable String uuid1,@PathVariable String uuid2){
+        return service.init(Arrays.asList(uuid1, uuid2)).getUuid();
     }
-    @PutMapping("/api/game/{uuid}/{letter}")
-    public boolean run(@PathVariable String uuid, @PathVariable String letter){
+    @GetMapping("/api/game/{uuid}/{letter}")
+    public String run(@PathVariable String uuid, @PathVariable String letter){
         return service.run(uuid,letter);
     }
 
